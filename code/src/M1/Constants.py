@@ -37,7 +37,3 @@ while True:
     STOP_WORDS.add(line)
 STOP_WORDS_FILE.close()
 print 'stop_words count: ', len(STOP_WORDS)
-
-
-# this is for a git test
-print('this is for a git test')
