@@ -1,10 +1,12 @@
 <component name="ProjectDictionaryState">
   <dictionary name="hanxuan">
     <words>
+      <w>bigram</w>
       <w>borda</w>
       <w>bordafuse</w>
       <w>combmnz</w>
       <w>hanxuan</w>
+      <w>lmdirichlet</w>
     </words>
   </dictionary>
 </component>

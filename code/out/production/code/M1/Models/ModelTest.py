@@ -12,7 +12,11 @@ from LMJelinekMercer import LMJelinekMercer
 
 from OkapiBM25PRF import OkapiBM25PRF
 
+from BLMLaplace import BLMLaplace
+
 from MetaSearch import MetaSearch
+
+from LMDirichlet import LMDirichlet
 
 import os.path
 
@@ -152,6 +156,23 @@ def okapi_bm25_prf_loop():
 
         bm25_prf_loop.print_result(output_file)
 
+def bigram():
+    input_file = open(query_file_path, 'r')
+    output_file = 'Results/output.bigram.laplace'
+    if os.path.exists(output_file):
+        os.remove(output_file)
+    while 1:
+        current_line = input_file.readline()
+        if current_line == '':
+            break
+        bi = BLMLaplace(current_line)
+
+        bi.term_regulate()
+
+        bi.score()
+
+        bi.print_result(output_file)
+
 def meta_search_borda_fuse():
     input_file = open(query_file_path, 'r')
     output_file = 'Results/output.meta.bordafuse'
@@ -190,6 +211,23 @@ def meta_search_combmnz():
 
         meta.print_result(output_file)
 
+def lmdirichlet():
+    input_file = open(query_file_path, 'r')
+    output_file = 'Results/output.lm.dirichlet'
+    if os.path.exists(output_file):
+        os.remove(output_file)
+    while 1:
+        current_line = input_file.readline()
+        if current_line == '':
+            break
+        dirichlet = LMDirichlet(current_line)
+
+        dirichlet.term_regulate()
+
+        dirichlet.score()
+
+        dirichlet.print_result(output_file)
+
 
 if __name__ == '__main__':
 
@@ -208,6 +246,11 @@ if __name__ == '__main__':
     # okapi_bm25_prf_loop()
     #
     # meta_search_borda_fuse()
+    #
+    # meta_search_combmnz()
+    #
+    # bigram()
 
-    meta_search_combmnz()
+    lmdirichlet()
+
 
