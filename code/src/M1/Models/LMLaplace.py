@@ -54,4 +54,3 @@ def cf(term_docs_freq):
     for doc_id in term_docs_freq:
         counter += term_docs_freq[doc_id]
     return counter
-
