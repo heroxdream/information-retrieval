@@ -16,6 +16,8 @@ from OkapiTF_IDF import OkapiTfIDF
 
 from M1.Constants import D
 
+from M1.Util import normalize_dict
+
 from M1.LOG import log
 
 import collections
@@ -45,24 +47,21 @@ class MetaSearch(IRModel):
 
     def score(self):
         self.lmjm.score()
-        self.vote(self.lmjm.rank_list, 0.2198, 'lmjm')
-
         self.lml.score()
-        self.vote(self.lml.rank_list, 0.2100, 'lml')
-
         self.bm.score()
-        self.vote(self.bm.rank_list, 0.2673, 'bm')
-
         self.prf.loop()
-        self.vote(self.prf.rank_list, 0.3040, 'prf')
-
         self.tf.score()
-        self.vote(self.tf.rank_list, 0.2108, 'tf')
-
         self.tfidf.score()
-        self.vote(self.tfidf.rank_list, 0.2563, 'tfidf')
 
-    def vote(self, ranklist, weight, model):
+    def borda_fuse(self):
+        self.vote_once(self.lmjm.rank_list, 0.2198, 'lmjm')
+        self.vote_once(self.lml.rank_list, 0.2100, 'lml')
+        self.vote_once(self.bm.rank_list, 0.2673, 'bm')
+        self.vote_once(self.prf.rank_list, 0.3040, 'prf')
+        self.vote_once(self.tf.rank_list, 0.2108, 'tf')
+        self.vote_once(self.tfidf.rank_list, 0.2563, 'tfidf')
+
+    def vote_once(self, ranklist, weight, model):
 
         weight = pow(weight, 3)
 
@@ -85,3 +84,18 @@ class MetaSearch(IRModel):
             for doc_id in self.rank_list:
                 if doc_id not in ranklist_set:
                     self.rank_list[doc_id] += bonus
+
+    def combmnz(self):
+        self.combine(self.lmjm.rank_list, -0.2198, 'lmjm')
+        self.combine(self.lml.rank_list, -0.2100, 'lml')
+        self.combine(self.bm.rank_list, 0.2673, 'bm')
+        self.combine(self.prf.rank_list, 0.3040, 'prf')
+        self.combine(self.tf.rank_list, 0.2108, 'tf')
+        self.combine(self.tfidf.rank_list, 0.2563, 'tfidf')
+        return 0
+
+    def combine(self, ranklist, weight, model):
+        log.info('meta search: %s: %s \tlist size (%s)', self.query_id, model, len(ranklist))
+        ranklist = normalize_dict(ranklist)
+        for k in ranklist:
+            self.rank_list[k] += ranklist[k] * weight

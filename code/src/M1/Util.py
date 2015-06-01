@@ -22,6 +22,12 @@ def strip_punctuation(term):
     term = string.replace(term, ')', '')
     return term
 
+def normalize_dict(d):
+    factor = 1.0 / sum(d.itervalues())
+    for k in d:
+        d[k] *= factor
+    return d
+
 
 def get_docno(doc_id):
     result = es.search(
@@ -70,4 +76,3 @@ def get_all_tf_by_docid(docid):
             terms_tf[str(term)] = terms_stats[term]['term_freq']
 
     return terms_tf
-

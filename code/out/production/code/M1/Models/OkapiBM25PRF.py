@@ -19,9 +19,9 @@ class OkapiBM25PRF(OkapiBM25):
     def __init__(self, query_str):
         OkapiBM25.__init__(self, query_str)
         self.k = 20
-        self.topN = 10
+        self.topN = 4
         self.alpha = 0.33
-        self.loop_round = 2
+        self.loop_round = 3
 
     def select_term(self, loop_round):
         terms_tf = dict()
