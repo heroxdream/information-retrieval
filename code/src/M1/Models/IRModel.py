@@ -98,10 +98,10 @@ class IRModel:
                     self.rank_list[docid] = score_this_term
 
     def score_once(self, tf, docid):
-        raise Exception('score_once must be implemeted ...')
+        raise Exception('score_once must be implemented ...')
 
     def score_twice(self, df):
-        raise Exception('score_twice must be implemeted ...')
+        raise Exception('score_twice must be implemented ...')
 
     def print_result(self, file_path):
         output = open(file_path, 'a')

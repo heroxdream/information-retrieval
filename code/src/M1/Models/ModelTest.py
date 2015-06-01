@@ -152,9 +152,9 @@ def okapi_bm25_prf_loop():
 
         bm25_prf_loop.print_result(output_file)
 
-def meta_search():
+def meta_search_borda_fuse():
     input_file = open(query_file_path, 'r')
-    output_file = 'Results/output.meta'
+    output_file = 'Results/output.meta.bordafuse'
     if os.path.exists(output_file):
         os.remove(output_file)
     while 1:
@@ -167,8 +167,28 @@ def meta_search():
 
         meta.score()
 
+        meta.borda_fuse()
+
         meta.print_result(output_file)
 
+def meta_search_combmnz():
+    input_file = open(query_file_path, 'r')
+    output_file = 'Results/output.meta.combmnz'
+    if os.path.exists(output_file):
+        os.remove(output_file)
+    while 1:
+        current_line = input_file.readline()
+        if current_line == '':
+            break
+        meta = MetaSearch(current_line)
+
+        meta.term_regulate()
+
+        meta.score()
+
+        meta.combmnz()
+
+        meta.print_result(output_file)
 
 
 if __name__ == '__main__':
@@ -185,6 +205,9 @@ if __name__ == '__main__':
     #
     # okapi_bm25_prf()
     #
-    okapi_bm25_prf_loop()
+    # okapi_bm25_prf_loop()
+    #
+    # meta_search_borda_fuse()
 
-    # meta_search()
+    meta_search_combmnz()
+
