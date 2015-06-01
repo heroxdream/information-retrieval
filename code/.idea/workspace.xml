@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="Output combmnz">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/M1/Models/BLMLaplace.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/M1/Models/LMLaplace.py" afterPath="$PROJECT_DIR$/src/M1/Models/LMLaplace.py" />
+    <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="B LM Model first commit">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="InformationRetrieval.iws" />
@@ -818,7 +816,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433170566878</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="B LM Model first commit">
+      <created>1433175010954</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1433175010955</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -878,7 +882,8 @@
     <MESSAGE value="Add MetaSearch combmnz model" />
     <MESSAGE value="Some Change" />
     <MESSAGE value="Output combmnz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Output combmnz" />
+    <MESSAGE value="B LM Model first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="B LM Model first commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
