@@ -216,6 +216,7 @@ def lmdirichlet():
     output_file = 'Results/output.lm.dirichlet'
     if os.path.exists(output_file):
         os.remove(output_file)
+    # term_freq_short = dict()
     while 1:
         current_line = input_file.readline()
         if current_line == '':
@@ -223,6 +224,15 @@ def lmdirichlet():
         dirichlet = LMDirichlet(current_line)
 
         dirichlet.term_regulate()
+
+        # for term in dirichlet.query_terms:
+        #     if term_freq.has_key(term):
+        #         term_freq_short[term] = term_freq[term]
+
+    # output = open('term_freq_short.cpkl', 'wb', 1024 * 1024)
+    # cPickle.dump(term_freq_short, output, protocol=cPickle.HIGHEST_PROTOCOL)
+    # print(len(term_freq_short))
+    # output.close()
 
         dirichlet.score()
 
@@ -250,7 +260,7 @@ if __name__ == '__main__':
     # meta_search_combmnz()
     #
     # bigram()
-
+    #
     lmdirichlet()
 
 
