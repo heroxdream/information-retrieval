@@ -85,7 +85,7 @@ def bigram_distance(docid, w1, w2):
         index=DATA_SET,
         doc_type='document',
         id=docid,
-        fields=['te xt'],
+        fields=['text'],
         body={
             "offsets": False,
             "payloads": False,
