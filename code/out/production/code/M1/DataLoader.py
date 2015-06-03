@@ -19,7 +19,7 @@ for doc in doc_length:
 avg_length = (total_length * 1.0) / (len(doc_length))
 
 
-term_freq_file = open(DATA_DIR + 'term_freq.cpkl', 'rb', 1024 * 1024 * 32)
+term_freq_file = open(DATA_DIR + 'term_freq_short.cpkl', 'rb', 1024 * 1024 * 32)
 term_freq = cPickle.load(term_freq_file)
 assert isinstance(term_freq, dict)
 term_freq_file.close()
