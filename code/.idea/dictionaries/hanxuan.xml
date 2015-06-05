@@ -5,8 +5,14 @@
       <w>borda</w>
       <w>bordafuse</w>
       <w>combmnz</w>
+      <w>dlen</w>
       <w>hanxuan</w>
       <w>lmdirichlet</w>
+      <w>mbytes</w>
+      <w>newfile</w>
+      <w>oldfile</w>
+      <w>poslist</w>
+      <w>stemmer</w>
     </words>
   </dictionary>
 </component>
