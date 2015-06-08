@@ -10,6 +10,10 @@ from Index.Models.LMLaplace import LMLaplace
 
 from Index.Models.BLMLaplace import BLMLaplace
 
+from Index.Models.Proximity import Proximity
+
+from Index.Constants import INDEX_DIR_PORTER
+
 import os.path
 
 import time
@@ -89,19 +93,38 @@ def bigram(index_manager):
 
         bi.print_result(output_file)
 
+def proximity(index_manager):
+    input_file = open(query_file_path, 'r')
+    output_file = 'Results/output.proximity'
+    if os.path.exists(output_file):
+        os.remove(output_file)
+    while 1:
+        current_line = input_file.readline()
+        if current_line == '':
+            break
+        pxm = Proximity(current_line, index_manager)
+
+        pxm.term_regulate()
+
+        pxm.score()
+
+        pxm.print_result(output_file)
+
 if __name__ == '__main__':
 
     t1 = time.time()
 
-    im = IndexManager()
+    im = IndexManager(INDEX_DIR_PORTER)
 
-    okapi_bm25(im)
+    # okapi_bm25(im)
+    #
+    # okapi_tf(im)
+    #
+    # lmlapalce(im)
+    #
+    # bigram(im)
 
-    okapi_tf(im)
-
-    lmlapalce(im)
-
-    bigram(im)
+    proximity(im)
 
     t2 = time.time()
 

@@ -1,10 +1,12 @@
 __author__ = 'hanxuan'
 
-INDEX_DIR_LS = '/Users/hanxuan/Dropbox/neu/summer15/information retrieval/data/IndexFile.Ls'
-
 INDEX_DIR_PORTER = '/Users/hanxuan/Dropbox/neu/summer15/information retrieval/data/IndexFile.Porter'
 
-INDEX_DIR_SNOWBALL = '/Users/hanxuan/Dropbox/neu/summer15/information retrieval/data/IndexFile.SnowBall'
+HEAD_DIR_PORTER = '/Users/hanxuan/Dropbox/neu/summer15/information retrieval/data/HeadFile.Porter'
+
+INDEX_DIR_1 = '/Users/hanxuan/Dropbox/neu/summer15/information retrieval/data/IndexFile.1'
+INDEX_DIR_2 = '/Users/hanxuan/Dropbox/neu/summer15/information retrieval/data/IndexFile.2'
+INDEX_DIR_3 = '/Users/hanxuan/Dropbox/neu/summer15/information retrieval/data/IndexFile.3'
 
 CATALOG_FILE = 'catalog.map.obj'
 
@@ -17,6 +19,8 @@ DLEN_MAP_FILE = 'doc.len.map.obj'
 IO_CACHE = 1024 * 1024 * 128
 
 I = 4
+
+B = 1
 
 # V = 141404
 

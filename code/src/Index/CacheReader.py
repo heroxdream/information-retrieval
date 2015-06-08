@@ -2,10 +2,25 @@ __author__ = 'hanxuan'
 
 from TokenInfo import TokenInfo
 
+from Index.Constants import I, B
+
+from VB import vb_decode
+
+import struct
+
 class CacheReader(object):
-    def __init__(self, data):
-        self.data = data
+    def __init__(self, byte_array):
+        self.bs = byte_array
+        self.data = None
         self.pointer = 0
+
+    def bs2data(self):
+        self.data = struct.unpack('{}I'.format(len(self.bs) / I), self.bs)
+        return self
+
+    def bs2data_vb(self):
+        self.data = vb_decode(self.bs)
+        return self
 
     def read_one(self):
         token_id = self.data[self.pointer]

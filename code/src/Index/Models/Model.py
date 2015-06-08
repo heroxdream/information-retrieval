@@ -19,7 +19,7 @@ import string
 from Index.IndexManager import IndexManager
 
 class Model(IRModel):
-    def __init__(self, query_str, im=IndexManager()):
+    def __init__(self, query_str, im):
         IRModel.__init__(self, query_str)
         self.im = im
         self.ls = LancasterStemmer()

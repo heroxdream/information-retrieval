@@ -10,12 +10,9 @@ import string
 
 import cPickle as cP
 
-import struct
-
 import collections
 
 import time
-
 
 from RetrievalModel.LOG import log
 
@@ -42,7 +39,10 @@ class IndexBuilder(object):
     global token_id_counter
     token_id_counter = 0
 
-    def __init__(self, output):
+    TEXT_PTN = r'<TEXT>(.*?)</TEXT>'
+    HEAD_PTN = r'<HEAD>(.*?)</HEAD>'
+
+    def __init__(self, output, pattern):
         self.catalog_new = dict()
         self.catalog_old = dict()
         self.index_cache = dict()
@@ -52,11 +52,12 @@ class IndexBuilder(object):
         # self.stemmer = LancasterStemmer()
         self.stemmer = PorterStemmer()
         # self.stemmer = SnowballStemmer('english')
+        self.ptn_field = pattern
         self.output_path = output
-        self.gap = 50000
+        self.gap = 10000
         self.remove_stopwords = True
         self.stem = True
-        self.join_cache = 1024 * 1024 * 128
+        self.join_cache = 1024 * 1024 * 32
 
     def pre_precess(self):
         files = os.path.join(self.output_path, '*')
@@ -70,15 +71,14 @@ class IndexBuilder(object):
         self.serialize_dlen_map()
         return 0
 
-    @staticmethod
-    def get_raw_tokens(segment):
+    def get_raw_tokens(self, segment):
         pattern1 = re.compile(r"<DOCNO>(.*?)</DOCNO>")
         doc_id = ''.join(pattern1.findall(segment)).strip()
-        pattern2 = re.compile(r'<TEXT>(.*?)</TEXT>', re.M | re.S)
+        pattern2 = re.compile(self.ptn_field, re.M | re.S)
         doc_text = ''.join(pattern2.findall(segment)).strip()
         pattern3 = re.compile(r"(\w+(\.?\w+)*)")
         if doc_id == '' or doc_text == '':
-            log.info('empty id or text found: {}'.format(segment))
+            log.debug('empty id or text found: {}'.format(segment))
         return pattern3.findall(doc_text), doc_id
 
     def filter_tokens(self, tokens, doc_id):
@@ -170,7 +170,7 @@ class IndexBuilder(object):
             counter += doc_count
             log.info('{}/({}) files processed, indexed {} documents...'.format(file_counter, len(glob.glob(files)), total_doc_counter))
 
-            if counter > self.gap or file_counter == len(glob.glob(files)):
+            if counter >= self.gap or file_counter == len(glob.glob(files)):
                 self.combine(total_doc_counter)
                 self.index_cache.clear()
                 self.catalog_old = self.catalog_new
@@ -190,7 +190,7 @@ class IndexBuilder(object):
     def dump_first_file(self, file_path):
         log.info('dumping: {}'.format(file_path))
         output = open(file_path, mode='wb', buffering=IO_CACHE)
-        self.catalog_new,catalog_offset = CacheWriter(self.index_cache).write(output)
+        self.catalog_new,catalog_offset = CacheWriter(self.index_cache).write_vb(output)
         output.close()
 
     def join_index(self, oldfile, newfile):
@@ -200,8 +200,7 @@ class IndexBuilder(object):
         log.info('cache_groups: {}'.format(cache_groups))
         for cache in cache_groups:
             bs = input_file.read(cache)
-            data = struct.unpack('{}I'.format(cache / I), bs)
-            data_map = CacheReader(data).read_all()
+            data_map = CacheReader(bs).bs2data_vb().read_all()
             log.debug('cache group: {}, data_map: {}'.format(cache, data_map))
             self.join_by_maps(data_map, output_file)
         self.append_remain_tokens(output_file)
@@ -211,7 +210,7 @@ class IndexBuilder(object):
 
     def append_remain_tokens(self, output_file):
         if len(self.index_cache) > 0:
-            self.catalog_new, catalog_offset = CacheWriter(self.index_cache).write(output_file, self.catalog_new, output_file.tell())
+            self.catalog_new, catalog_offset = CacheWriter(self.index_cache).write_vb(output_file, self.catalog_new, output_file.tell())
 
     def join_by_maps(self, data_map, output_file):
         index_cache_new = dict()
@@ -222,7 +221,7 @@ class IndexBuilder(object):
             else:
                 index_cache_new[token] = data_map[token].get_pos_map()
         log.debug('index_cache_new: {}'.format(index_cache_new))
-        self.catalog_new, catalog_offset = CacheWriter(index_cache_new).write(output_file, self.catalog_new, output_file.tell())
+        self.catalog_new, catalog_offset = CacheWriter(index_cache_new).write_vb(output_file, self.catalog_new, output_file.tell())
         log.info('output_file position: {} Mbytes'.format(output_file.tell() * 1.0 / 1024 / 1024))
         return output_file.tell()
 
@@ -277,10 +276,29 @@ if __name__ == '__main__':
 
     t1 = time.time()
 
-    # builder = IndexBuilder(INDEX_DIR_SNOWBALL)
-    # builder.pre_precess()
-    # builder.process()
-    # builder.post_process()
+    builder = IndexBuilder(INDEX_DIR_PORTER, IndexBuilder.TEXT_PTN)
+    builder.pre_precess()
+    builder.process()
+    builder.post_process()
+
+    builder = IndexBuilder(INDEX_DIR_1, IndexBuilder.TEXT_PTN)
+    builder.stem = False
+    builder.pre_precess()
+    builder.process()
+    builder.post_process()
+
+    builder = IndexBuilder(INDEX_DIR_2, IndexBuilder.TEXT_PTN)
+    builder.remove_stopwords = False
+    builder.pre_precess()
+    builder.process()
+    builder.post_process()
+
+    builder = IndexBuilder(INDEX_DIR_3, IndexBuilder.TEXT_PTN)
+    builder.stem = False
+    builder.remove_stopwords = False
+    builder.pre_precess()
+    builder.process()
+    builder.post_process()
 
     t2 = time.time()
 
