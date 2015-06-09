@@ -64,14 +64,14 @@ class MinSpanQueue(object):
 
 if __name__ == '__main__':
     h1 = [4]
-    # h2 = [7,6,8, 99]
-    # h3 = [3, 5]
-    l = [h1]
+    h2 = [7,6,8, 99]
+    h3 = [3, 5]
+    l = [h1, h2 , h3]
     print l
 
     msq = MinSpanQueue(l)
     print msq.min_span()
-    print msq.heads
+    # print msq.heads
 
 # import random
 #
