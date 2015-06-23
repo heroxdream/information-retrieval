@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="redis record in_link_count">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/FrontierService/BackQueue.py" afterPath="$PROJECT_DIR$/src/Crawl/FrontierService/BackQueue.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/CacheWriter.py" afterPath="$PROJECT_DIR$/src/Index/CacheWriter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/Crawler/Canonicalizer.py" afterPath="$PROJECT_DIR$/src/Crawl/Crawler/Canonicalizer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py" afterPath="$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py" afterPath="$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/IndexBuilder.py" afterPath="$PROJECT_DIR$/src/Index/IndexBuilder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/IndexManager.py" afterPath="$PROJECT_DIR$/src/Index/IndexManager.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/Models/LMLaplace.py" afterPath="$PROJECT_DIR$/src/Index/Models/LMLaplace.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RetrievalModel/Models/LMLaplace.py" afterPath="$PROJECT_DIR$/src/RetrievalModel/Models/LMLaplace.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/Main.py" afterPath="$PROJECT_DIR$/src/Crawl/Main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/Models/Main.py" afterPath="$PROJECT_DIR$/src/Index/Models/Main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RetrievalModel/Models/MetaSearch.py" afterPath="$PROJECT_DIR$/src/RetrievalModel/Models/MetaSearch.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/Models/MinSpanQueue.py" afterPath="$PROJECT_DIR$/src/Index/Models/MinSpanQueue.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/Models/Model.py" afterPath="$PROJECT_DIR$/src/Index/Models/Model.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/Models/Proximity.py" afterPath="$PROJECT_DIR$/src/Index/Models/Proximity.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/Crawler/Spider.py" afterPath="$PROJECT_DIR$/src/Crawl/Crawler/Spider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RetrievalModel/TermVector.py" afterPath="$PROJECT_DIR$/src/RetrievalModel/TermVector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py" afterPath="$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RetrievalModel/Util.py" afterPath="$PROJECT_DIR$/src/RetrievalModel/Util.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/setup_es_.py" afterPath="$PROJECT_DIR$/src/Crawl/setup_es_.py" />
+    <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="small refactor: Utils-&gt;log,es,redis">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/code/test.py" afterPath="$PROJECT_DIR$/out/production/code/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -1045,7 +1025,13 @@
       <option name="project" value="LOCAL" />
       <updated>1435071103152</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="small refactor: Utils-&gt;log,es,redis">
+      <created>1435071214131</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1435071214131</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -1118,7 +1104,8 @@
     <MESSAGE value="Frontier + Crawler multiprocessing finished and tested" />
     <MESSAGE value="robots rules added" />
     <MESSAGE value="redis record in_link_count" />
-    <option name="LAST_COMMIT_MESSAGE" value="redis record in_link_count" />
+    <MESSAGE value="small refactor: Utils-&gt;log,es,redis" />
+    <option name="LAST_COMMIT_MESSAGE" value="small refactor: Utils-&gt;log,es,redis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
