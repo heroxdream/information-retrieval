@@ -30,6 +30,10 @@ from lxml import etree
 
 from Parser import ParserTarget
 
+import robotparser
+
+from Utils.network import get_host
+
 
 class Spider(object):
 
@@ -132,6 +136,22 @@ class Spider(object):
 
     def task(self, url):
         log.debug('*********************** in task: {} ***********************'.format(url))
+
+        domain = get_host(url)
+        if domain not in self.robots and 'html' not in domain and 'htm' not in domain and ('com' in domain or 'org' in domain):
+            try:
+                rp = robotparser.RobotFileParser()
+                rp.set_url('http://' + domain + '/robots.txt')
+                rp.read()
+                log.debug('~~~~~~~~~~~~~~~~~~~ ROBOTS {}~~~~~~~~~~~~~~~~~~~'.format(domain))
+                self.robots[domain] = rp
+            except Exception, e:
+                log.debug('~~~~~~~~~~~~~~~~~~~ FAIL ROBOTS {}~~~~~~~~~~~~~~~~~~~'.format(domain))
+                log.debug(e)
+        else:
+            if domain in self.robots and (not self.robots[domain].can_fetch('*', url)):
+                return None
+
         opener = urllib2.build_opener()
         opener.addheaders = [('User-agent', 'Mozilla/5.0')]
         try:

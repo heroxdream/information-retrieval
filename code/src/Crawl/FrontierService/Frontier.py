@@ -2,10 +2,6 @@ __author__ = 'hanxuan'
 
 from Utils.LOG import log
 
-from urlparse import urlparse
-
-import time
-
 from multiprocessing.connection import Listener
 
 from multiprocessing.connection import Client
@@ -14,11 +10,7 @@ from multiprocessing import Process
 
 from Crawl.MemShareManager import MemShareManager
 
-import random
-
-import string
-
-import re
+from Utils.network import get_host
 
 
 class Frontier(object):
@@ -64,16 +56,9 @@ class Frontier(object):
             level_url = self.front_queue.pop_one()
             if level_url:
                 level, url = level_url
-                domain = self.get_host(url)
+                domain = get_host(url)
                 self.back_queue.push_one(domain, (level, url))
                 log.debug('F2B: level:{}, url:{}'.format(level, url))
-
-    @staticmethod
-    def get_host(url):
-        authority_regex = re.compile('^(?:([^\@]+)\@)?([^\:]+)(?:\:(.+))?$')
-        authority = urlparse(url).netloc
-        host = authority_regex.match(authority).groups()[1]
-        return host
 
     def push_out(self):
         address = ('127.0.0.1', Frontier.PUSH_OUT_PORT)

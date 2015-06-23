@@ -9,7 +9,7 @@ import mmh3
 class URLFilter(object):
     def __init__(self):
         self.forbidden_keys = ['video', 'facebook', 'youtube', 'twitter', 'instagram', 'tv',
-                               'amazon', 'ebay', 'photo', 'image', 'game']
+                               'amazon', 'ebay', 'photo', 'image', 'game', 'shop']
         self.seen = ScalableBloomFilter(initial_capacity=10000, mode=ScalableBloomFilter.LARGE_SET_GROWTH)
         # self.seen = set()
 
