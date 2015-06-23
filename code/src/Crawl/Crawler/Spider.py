@@ -34,6 +34,8 @@ import robotparser
 
 from Utils.network import get_host
 
+from Utils.REDIS import rs
+
 
 class Spider(object):
 
@@ -175,6 +177,7 @@ class Spider(object):
             links = parser.target.links
             for link in links:
                 self.url_queue.put(link)
+                rs.incr(link)
 
             doc = dict(url=url, html=html, header=str(header), text=text, title=title, out_links=links)
             res = es.index(index=DATA_SET, doc_type='document', id=self.finished_page.value, body=doc, timeout=60)

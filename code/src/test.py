@@ -402,60 +402,69 @@
 
 
 
-from multiprocessing import Pool
-from multiprocessing.connection import Listener
-from array import array
-from multiprocessing.connection import Client
-from array import array
-import time
-
-
-def f1():
-    address = ('localhost', 9000)     # family is deduced to be 'AF_INET'
-    listener = Listener(address, authkey='secret password')
-
-    conn = listener.accept()
-    print 'connection accepted from', listener.address
-    while True:
-        conn.send_bytes('hello')
-        time.sleep(1)
-    conn.close()
-    listener.close()
-
-
-def f2():
-    address = ('localhost', 9000)
-    conn = Client(address, authkey='secret password')
-    while True:
-        print conn.recv_bytes()
-    conn.close()
-
-def start():
-    pool = Pool(2)
-    pool.apply_async(f2)
-    pool.apply_async(f1)
-    pool.close()
-    pool.join()
-
-if __name__ == '__main__':
-
-    from Crawl.MemShareManager import MemShareManager
-
-    from Queue import PriorityQueue
-
-    q = PriorityQueue()
-
-    mgr = MemShareManager()
-    mgr.start()
-
-    pr_q1 = mgr.PriorityQueue()
-
-    pr_q1.put((1, '111'))
-
-    print pr_q1.get()
-
-    pr_q2 = mgr.PriorityQueue()
+# from multiprocessing import Pool
+# from multiprocessing.connection import Listener
+# from array import array
+# from multiprocessing.connection import Client
+# from array import array
+# import time
+#
+#
+# def f1():
+#     address = ('localhost', 9000)     # family is deduced to be 'AF_INET'
+#     listener = Listener(address, authkey='secret password')
+#
+#     conn = listener.accept()
+#     print 'connection accepted from', listener.address
+#     while True:
+#         conn.send_bytes('hello')
+#         time.sleep(1)
+#     conn.close()
+#     listener.close()
+#
+#
+# def f2():
+#     address = ('localhost', 9000)
+#     conn = Client(address, authkey='secret password')
+#     while True:
+#         print conn.recv_bytes()
+#     conn.close()
+#
+# def start():
+#     pool = Pool(2)
+#     pool.apply_async(f2)
+#     pool.apply_async(f1)
+#     pool.close()
+#     pool.join()
+#
+# if __name__ == '__main__':
+#
+#     from Crawl.MemShareManager import MemShareManager
+#
+#     from Queue import PriorityQueue
+#
+#     q = PriorityQueue()
+#
+#     mgr = MemShareManager()
+#     mgr.start()
+#
+#     pr_q1 = mgr.PriorityQueue()
+#
+#     pr_q1.put((1, '111'))
+#
+#     print pr_q1.get()
+#
+#     pr_q2 = mgr.PriorityQueue()
 
 
 
     # start()
+
+
+
+
+
+r.incr('url')
+
+print r.get('url'), type(r.get('url'))
+
