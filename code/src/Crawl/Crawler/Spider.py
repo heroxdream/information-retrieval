@@ -14,9 +14,9 @@ from multiprocessing import Manager
 
 import multiprocessing
 
-from Utils.LOG import log
+from Utils.log import log
 
-from Utils.ES import es
+from Utils.es import es
 
 from Crawl.setup_es_ import create_index, DATA_SET
 
@@ -34,7 +34,7 @@ import robotparser
 
 from Utils.network import get_host
 
-from Utils.REDIS import rs
+from Utils.redis import rs
 
 
 class Spider(object):

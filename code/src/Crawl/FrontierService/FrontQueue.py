@@ -6,9 +6,9 @@ from collections import defaultdict
 
 import threading
 
-from Utils.LOG import log
+from Utils.log import log
 
-from Utils.REDIS import rs
+from Utils.redis import rs
 
 import time
 

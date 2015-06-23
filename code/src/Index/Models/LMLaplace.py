@@ -4,7 +4,7 @@ import scipy as sp
 
 from Index.Constants import V
 from Index.Models.Model import Model
-from Utils.LOG import log
+from Utils.log import log
 
 
 class LMLaplace(Model):

@@ -9,7 +9,7 @@ from nltk import SnowballStemmer
 from RetrievalModel.Models.IRModel import IRModel
 from RetrievalModel.Constants import MEAN_LESS, SAFE_WORD, DESC_WORDS, STOP_WORDS, STEM, STRIP_S, DEL_BIG
 from RetrievalModel.Util import *
-from Utils.LOG import log
+from Utils.log import log
 
 
 class Model(IRModel):

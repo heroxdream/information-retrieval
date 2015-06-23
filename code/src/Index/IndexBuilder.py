@@ -8,7 +8,7 @@ import cPickle as cP
 import collections
 import time
 
-from Utils.LOG import log
+from Utils.log import log
 from RetrievalModel.Constants import FILE_DIR
 from RetrievalModel.Constants import STOP_WORDS
 from CacheReader import CacheReader

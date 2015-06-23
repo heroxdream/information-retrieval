@@ -1,7 +1,7 @@
 __author__ = 'hanxuan'
 
 from Crawl.Crawler import SpiderConfig
-from Utils.LOG import log
+from Utils.log import log
 
 
 # def main():

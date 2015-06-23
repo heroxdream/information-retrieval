@@ -1,6 +1,6 @@
 __author__ = 'hanxuan'
 
-from Utils.LOG import log
+from Utils.log import log
 
 from multiprocessing.connection import Listener
 

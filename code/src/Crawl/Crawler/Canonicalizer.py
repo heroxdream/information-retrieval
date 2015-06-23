@@ -5,7 +5,7 @@ from urllib import unquote
 from string import *
 import re
 
-from Utils.LOG import log
+from Utils.log import log
 
 
 class Canonicalizer(object):

@@ -10,7 +10,7 @@ from Index.Models.LMLaplace import LMLaplace
 from Index.Models.BLMLaplace import BLMLaplace
 from Index.Models.Proximity import Proximity
 from Index.Constants import INDEX_DIR_PORTER
-from Utils.LOG import log
+from Utils.log import log
 
 query_file_path = "/Users/hanxuan/Dropbox/neu/summer15/information retrieval/data/AP_DATA/query_desc.51-100.short.txt"
 

@@ -6,7 +6,7 @@ from collections import defaultdict
 
 import threading
 
-from Utils.LOG import log
+from Utils.log import log
 
 import time
 
