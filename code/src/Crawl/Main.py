@@ -3,7 +3,7 @@ __author__ = 'hanxuan'
 from Crawl.setup_es_ import create_index, DATA_SET
 from Crawler.SpiderConfig import SpiderConfig
 from Crawler.Spider import Spider
-from FrontierService import Frontier
+from FrontierService.Frontier import Frontier
 from multiprocessing import Process
 
 from Utils.ues import es

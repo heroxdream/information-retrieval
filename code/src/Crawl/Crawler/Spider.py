@@ -106,7 +106,7 @@ class Spider(object):
 
         process_pool = []
         while True:
-            if Spider.finished_page.value > self.max_tasks.value:
+            if self.finished_page.value > self.max_tasks.value:
                 log.info("############ ALL TASK DONE #############")
                 for p in process_pool:
                     if not p.is_alive():
