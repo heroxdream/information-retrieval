@@ -1,9 +1,5 @@
 __author__ = 'Xuan Han'
 
-import cPickle
-
-from LOG import log
-
 DATA_DIR = '/Users/hanxuan/Dropbox/neu/summer15/information retrieval/data/'
 
 #

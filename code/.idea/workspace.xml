@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="proximity output added.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/Constants.py" afterPath="$PROJECT_DIR$/src/Index/Constants.py" />
+    <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="minor changes&#10;">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/RetrievalModel/ES.py" afterPath="$PROJECT_DIR$/src/Utils/ES.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/RetrievalModel/LOG.py" afterPath="$PROJECT_DIR$/src/Utils/LOG.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/CacheWriter.py" afterPath="$PROJECT_DIR$/src/Index/CacheWriter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RetrievalModel/Constants.py" afterPath="$PROJECT_DIR$/src/RetrievalModel/Constants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RetrievalModel/DataLoader.py" afterPath="$PROJECT_DIR$/src/RetrievalModel/DataLoader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/IndexBuilder.py" afterPath="$PROJECT_DIR$/src/Index/IndexBuilder.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/IndexManager.py" afterPath="$PROJECT_DIR$/src/Index/IndexManager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/Models/LMLaplace.py" afterPath="$PROJECT_DIR$/src/Index/Models/LMLaplace.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RetrievalModel/Models/LMLaplace.py" afterPath="$PROJECT_DIR$/src/RetrievalModel/Models/LMLaplace.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/Models/Main.py" afterPath="$PROJECT_DIR$/src/Index/Models/Main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RetrievalModel/Models/MetaSearch.py" afterPath="$PROJECT_DIR$/src/RetrievalModel/Models/MetaSearch.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/Models/MinSpanQueue.py" afterPath="$PROJECT_DIR$/src/Index/Models/MinSpanQueue.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/Models/Model.py" afterPath="$PROJECT_DIR$/src/Index/Models/Model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/Models/Proximity.py" afterPath="$PROJECT_DIR$/src/Index/Models/Proximity.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RetrievalModel/TermVector.py" afterPath="$PROJECT_DIR$/src/RetrievalModel/TermVector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RetrievalModel/Util.py" afterPath="$PROJECT_DIR$/src/RetrievalModel/Util.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Index/VB.py" afterPath="$PROJECT_DIR$/src/Index/VB.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/hanxuan.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/hanxuan.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/code/test.py" afterPath="$PROJECT_DIR$/out/production/code/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test.py" afterPath="$PROJECT_DIR$/src/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="InformationRetrieval.iws" />
@@ -26,111 +45,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IndexBuilder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/IndexBuilder.py">
+      <file leaf-file-name="Parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Parser.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="284" column="16" selection-start-line="284" selection-start-column="12" selection-end-line="284" selection-end-column="16" />
+              <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
+              <folding>
+                <element signature="e#24#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexData.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RetrievalModel/IndexData.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="112" column="30" selection-start-line="112" selection-start-column="15" selection-end-line="112" selection-end-column="30" />
+              <folding>
+                <element signature="e#25#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Spider.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Spider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="3.8767772">
+              <caret line="181" column="25" selection-start-line="181" selection-start-column="25" selection-end-line="181" selection-end-column="25" />
+              <folding>
+                <element signature="e#24#75#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Python/2.7/site-packages/elasticsearch/client/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="242" column="48" selection-start-line="242" selection-start-column="41" selection-end-line="242" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/Constants.py">
+      <file leaf-file-name="FrontQueue.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <caret line="21" column="34" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CacheWriter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/CacheWriter.py">
+      <file leaf-file-name="setup_es_.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Crawl/setup_es_.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-              <folding>
-                <element signature="e#24#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CacheReader.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/CacheReader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="29" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="29" />
+              <caret line="78" column="36" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Proximity.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/Models/Proximity.py">
+      <file leaf-file-name="URLFilter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
               <folding>
-                <element signature="e#24#47#0" expanded="true" />
+                <element signature="e#24#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinSpanQueue.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/Models/MinSpanQueue.py">
+      <file leaf-file-name="Frontier.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="11" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
-              <folding>
-                <element signature="e#25#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VB.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Index/VB.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28708133">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexManager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/IndexManager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="70" column="25" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="25" />
-              <folding>
-                <element signature="e#24#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/Models/Main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="97" column="44" selection-start-line="118" selection-start-column="6" selection-end-line="122" selection-end-column="11" />
-              <folding>
-                <element signature="e#24#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RetrievalModel/Constants.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -166,30 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/out/production/code/M1/DataLoader.py" />
-        <option value="$PROJECT_DIR$/src/M1/Models/OkapiBM25PRF.py" />
-        <option value="$PROJECT_DIR$/src/M1/Models/LMJelinekMercer.py" />
-        <option value="$PROJECT_DIR$/src/M1/Models/MetaSearch.py" />
-        <option value="$PROJECT_DIR$/src/M1/Models/Results/BLMLaplace.py" />
-        <option value="$PROJECT_DIR$/src/M1/Models/IRModel.py" />
-        <option value="$PROJECT_DIR$/src/M1/Models/LMLaplace.py" />
-        <option value="$PROJECT_DIR$/src/M1/Constants.py" />
-        <option value="$PROJECT_DIR$/src/M1/Models/BLMLaplace.py" />
-        <option value="$PROJECT_DIR$/src/M1/Models/Results/LMDirichlet.py" />
-        <option value="$PROJECT_DIR$/src/M1/Models/LMDirichlet.py" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/M1/Util.py" />
-        <option value="$PROJECT_DIR$/src/M1/DataLoader.py" />
-        <option value="$PROJECT_DIR$/src/M1/Models/ModelTest.py" />
-        <option value="$PROJECT_DIR$/out/production/code/RetrievalModel/IndexData.py" />
-        <option value="$PROJECT_DIR$/src/RetrievalModel/IndexData.py" />
-        <option value="$PROJECT_DIR$/src/Index/TermInfo.py" />
-        <option value="$PROJECT_DIR$/src/RetrievalModel/Models/ModelTest.py" />
-        <option value="$PROJECT_DIR$/src/RetrievalModel/Models/BLMLaplace.py" />
-        <option value="$PROJECT_DIR$/src/Index/CacheManager.py" />
-        <option value="$PROJECT_DIR$/src/RetrievalModel/Models/IRModel.py" />
-        <option value="$PROJECT_DIR$/src/Index/Models/IRModel.py" />
-        <option value="$PROJECT_DIR$/out/production/code/Index/Models/OkapiBM25.py" />
         <option value="$PROJECT_DIR$/out/production/code/Index/Models/Model.py" />
         <option value="$PROJECT_DIR$/src/Index/Models/Results/BLMLaplace.py" />
         <option value="$PROJECT_DIR$/src/Index/Models/OkapiBM25.py" />
@@ -205,18 +178,42 @@
         <option value="$PROJECT_DIR$/src/Index/Models/Model.py" />
         <option value="$PROJECT_DIR$/src/Index/CacheWriter.py" />
         <option value="$PROJECT_DIR$/src/Index/IndexBuilder.py" />
-        <option value="$PROJECT_DIR$/src/test.py" />
         <option value="$PROJECT_DIR$/src/RetrievalModel/DataLoader.py" />
         <option value="$PROJECT_DIR$/src/Index/Models/LMLaplace.py" />
         <option value="$PROJECT_DIR$/out/production/code/Index/Models/Proximity.py" />
         <option value="$PROJECT_DIR$/src/Index/TokenInfo.py" />
         <option value="$PROJECT_DIR$/src/Index/IndexManager.py" />
-        <option value="$PROJECT_DIR$/src/Index/Models/Proximity.py" />
         <option value="$PROJECT_DIR$/src/Index/Constants.py" />
         <option value="$PROJECT_DIR$/src/Index/Models/MinSpanQueue.py" />
-        <option value="$PROJECT_DIR$/src/RetrievalModel/Constants.py" />
         <option value="$PROJECT_DIR$/src/Index/Models/Main.py" />
+        <option value="$PROJECT_DIR$/src/Index/Models/Proximity.py" />
         <option value="$PROJECT_DIR$/src/Index/VB.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Frontier/Canonicalizer.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/SpiderTask.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/DocDuplicateDetect.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/seeds" />
+        <option value="$PROJECT_DIR$/src/Crawl/Canonicalization.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/SpiderConfig.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Parser.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Canonicalizer.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Spider.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Frontier/Frontier.py" />
+        <option value="$PROJECT_DIR$/src/RetrievalModel/Constants.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/FrontierService/Main.py" />
+        <option value="$PROJECT_DIR$/src/Utils/LOG.py" />
+        <option value="$PROJECT_DIR$/src/test.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Main.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/FrontierService/BackQueue.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Crawler/SpiderConfig.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Crawler/Canonicalizer.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/MemShareManager.py" />
+        <option value="$PROJECT_DIR$/src/test2.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Crawler/Parser.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/setup_es_.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Crawler/Spider.py" />
       </list>
     </option>
   </component>
@@ -243,7 +240,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="800" />
+    <option name="height" value="803" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -317,7 +314,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RetrievalModel" />
+              <option name="myItemId" value="Utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,8 +335,22 @@
               <option name="myItemId" value="RetrievalModel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Models" />
+              <option name="myItemId" value="InformationRetrieval" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crawl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -357,7 +368,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Index" />
+              <option name="myItemId" value="Crawl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontierService" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -375,19 +390,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Index" />
+              <option name="myItemId" value="Crawl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Models" />
+              <option name="myItemId" value="Crawler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,7 +420,7 @@
     <property name="last.edited.regexp" value="asfd&lt;TEXT&gt; adsf &lt;/TEXT&gt;&#10;" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Utils" />
     <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="RecentsManager">
@@ -413,15 +428,15 @@
       <recent name="$PROJECT_DIR$/src/Index" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Crawl/Crawler" />
+      <recent name="$PROJECT_DIR$/src/Crawl/Frontier" />
+      <recent name="$PROJECT_DIR$/src/Utils" />
+      <recent name="$PROJECT_DIR$/src/Crawl" />
       <recent name="$PROJECT_DIR$/src/Index/Models/Results/porter" />
-      <recent name="$PROJECT_DIR$/src/Index/Models" />
-      <recent name="$PROJECT_DIR$/src/Index/Test" />
-      <recent name="$PROJECT_DIR$/src/M1/Models" />
-      <recent name="$PROJECT_DIR$/src/M1/Data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Main">
-    <configuration default="false" name="IndexBuilder" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Spider">
+    <configuration default="false" name="Parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <log_file path="$PROJECT_DIR$/../../log/es.log" checked="true" skipped="true" show_all="false" alias="mylog" />
       <output_file path="$PROJECT_DIR$/../../log/cons.log" is_save="true" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -430,17 +445,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Index" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Crawl/Crawler" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Index/IndexBuilder.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Crawl/Crawler/Parser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="IndexManager" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Frontier" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <log_file path="$PROJECT_DIR$/../../log/es.log" checked="true" skipped="true" show_all="false" alias="mylog" />
       <output_file path="$PROJECT_DIR$/../../log/cons.log" is_save="true" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -449,17 +464,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Index" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Crawl/FrontierService" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Index/IndexManager.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Spider" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <log_file path="$PROJECT_DIR$/../../log/es.log" checked="true" skipped="true" show_all="false" alias="mylog" />
       <output_file path="$PROJECT_DIR$/../../log/cons.log" is_save="true" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -468,17 +483,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Index/Models" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Crawl/Crawler" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Index/Models/Main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Crawl/Crawler/Spider.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Proximity" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="SpiderConfig" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <log_file path="$PROJECT_DIR$/../../log/es.log" checked="true" skipped="true" show_all="false" alias="mylog" />
       <output_file path="$PROJECT_DIR$/../../log/cons.log" is_save="true" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -487,17 +502,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Index/Models" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Crawl/Crawler" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Index/Models/Proximity.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Crawl/Crawler/SpiderConfig.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="MinSpanQueue" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <log_file path="$PROJECT_DIR$/../../log/es.log" checked="true" skipped="true" show_all="false" alias="mylog" />
       <output_file path="$PROJECT_DIR$/../../log/cons.log" is_save="true" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -506,12 +521,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Index/Models" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Index/Models/MinSpanQueue.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/test2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -789,6 +804,25 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="FrontQueue" type="PythonConfigurationType" factoryName="Python">
+      <log_file path="$PROJECT_DIR$/../../log/es.log" checked="true" skipped="true" show_all="false" alias="mylog" />
+      <output_file path="$PROJECT_DIR$/../../log/cons.log" is_save="true" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Crawl/FrontierService" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python">
       <output_file path="$PROJECT_DIR$/../../log/es.log" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -807,21 +841,22 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Python.test" />
-      <item index="1" class="java.lang.String" itemvalue="Python.IndexBuilder" />
-      <item index="2" class="java.lang.String" itemvalue="Python.IndexManager" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Main" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Proximity" />
-      <item index="5" class="java.lang.String" itemvalue="Python.MinSpanQueue" />
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="Python.FrontQueue" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Parser" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Frontier" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Spider" />
+      <item index="5" class="java.lang.String" itemvalue="Python.SpiderConfig" />
+      <item index="6" class="java.lang.String" itemvalue="Python.test2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.MinSpanQueue" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Proximity" />
-        <item index="3" class="java.lang.String" itemvalue="Python.IndexManager" />
-        <item index="4" class="java.lang.String" itemvalue="Python.IndexBuilder" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Spider" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Parser" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test2" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Frontier" />
+        <item index="4" class="java.lang.String" itemvalue="Python.SpiderConfig" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -990,7 +1025,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433794018126</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="minor changes&#10;">
+      <created>1433883640842</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1433883640843</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -1003,62 +1044,35 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="800" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="803" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32587412" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32770744" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6694915" sideWeight="0.5176731" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47881356" sideWeight="0.52646637" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6661972" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6666667" sideWeight="0.4874816" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6638537" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47819972" sideWeight="0.47353363" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.66433567" sideWeight="0.4874816" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25822604" sideWeight="0.48746517" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32768363" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32489452" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2569956" sideWeight="0.5125348" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3972028" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3983051" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32770744" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32344633" sideWeight="0.48232695" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32485875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32447553" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.66950357" sideWeight="0.5176731" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39858156" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32587412" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32770744" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.66713285" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2641243" sideWeight="0.48232695" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6676017" sideWeight="0.4874816" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25822604" sideWeight="0.48746517" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32485875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2569956" sideWeight="0.5125348" order="3" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1086,7 +1100,8 @@
     <MESSAGE value="(1) index compressed finished&#10;(2) proximity search finished" />
     <MESSAGE value="(1) index compress by using VB encode&#10;(2) proximity by using skip grams minimum span" />
     <MESSAGE value="proximity output added." />
-    <option name="LAST_COMMIT_MESSAGE" value="proximity output added." />
+    <MESSAGE value="minor changes&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1106,8 +1121,18 @@
           <line>1</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/src/Crawl/Main.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/src/RetrievalModel/IndexData.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1116,394 +1141,407 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/RetrievalModel/Constants.py">
+    <entry file="file://$PROJECT_DIR$/src/Utils/LOG.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.4536862">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/nltk/stem/porter.py">
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.019033674">
-          <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
+        <state vertical-scroll-proportion="-1.4536862">
+          <caret line="172" column="17" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/cPickle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3319838">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/code/Index/IndexManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5769231">
-          <caret line="67" column="50" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/code/Index/Models/LMLaplace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.2145749">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/code/Index/Models/BLMLaplace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6486091">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/nltk/stem/snowball.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24450952">
-          <caret line="81" column="44" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RetrievalModel/Models/OkapiBM25PRF.py">
+    <entry file="file://$PROJECT_DIR$/src/RetrievalModel/Util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="187" column="4" selection-start-line="187" selection-start-column="4" selection-end-line="187" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RetrievalModel/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/_struct.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326572">
-          <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/python-skeletons/io.py">
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/string.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326572">
-          <caret line="266" column="8" selection-start-line="266" selection-start-column="8" selection-end-line="266" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4300203">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/code/Index/CacheWriter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.525355">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/code/Index/Constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.15618661">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/code/Index/Models/Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326572">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/code/Index/Models/OkapiBM25.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.066176474">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.24763705">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bisect.py">
+    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/time.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09127789">
-          <caret line="3" column="59" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="59" />
+        <state vertical-scroll-proportion="1.9489603">
+          <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/Models/OkapiTF.py">
+    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/_collections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30567685">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/IPython/utils/ipstruct.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.021834">
+          <caret line="230" column="8" selection-start-line="230" selection-start-column="8" selection-end-line="230" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/pybloom/pybloom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3309859">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/pybloom/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15845071">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/seeds">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/Models/BLMLaplace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/sys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.57478">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/Queue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8401759">
-          <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
+        <state vertical-scroll-proportion="-0.9985444">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/heapq.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60649085">
-          <caret line="153" column="17" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
-          <folding>
-            <element signature="e#6240#6299#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RetrievalModel/Models/IRModel.py">
+    <entry file="file://$PROJECT_DIR$/src/Crawl/DuplicateDetect.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="20" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/synchronize.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/Models/OkapiBM25.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/code/Index/Models/MinSpanQueue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/code/Index/Models/Proximity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33235294">
-          <caret line="144" column="4" selection-start-line="144" selection-start-column="4" selection-end-line="144" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/pylru.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.022058824">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RetrievalModel/Models/OkapiTF.py">
+    <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/SpiderTask.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/_multiprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62882096">
+          <caret line="158" column="23" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/queues.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3551674">
+          <caret line="59" column="53" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6491994">
+          <caret line="160" column="4" selection-start-line="160" selection-start-column="4" selection-end-line="160" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17467248">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RetrievalModel/Constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/gevent/threadpool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1804949">
+          <caret line="251" column="8" selection-start-line="251" selection-start-column="8" selection-end-line="251" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="223" column="0" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/python-skeletons/multiprocessing/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3313783">
+          <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/pool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.56305">
+          <caret line="523" column="8" selection-start-line="523" selection-start-column="8" selection-end-line="523" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/threadpool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3632353">
+          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33235294">
-          <caret line="431" column="4" selection-start-line="431" selection-start-column="4" selection-end-line="431" selection-end-column="4" />
+          <caret line="3320" column="6" selection-start-line="3320" selection-start-column="6" selection-end-line="3320" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/scipy/__init__.py">
+    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/exceptions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8897059">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3313783">
+          <caret line="90" column="6" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/numpy/core/umath.py">
+    <entry file="file://$PROJECT_DIR$/out/production/code/Crawl/FrontierService/Frontier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1764706">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.41935483">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RetrievalModel/DataLoader.py">
+    <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/SpiderConfig.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40441176">
-          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.3382353">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/Models/LMLaplace.py">
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5294118">
-          <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.3313783">
+          <caret line="257" column="0" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/BackQueue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="20" />
           <folding>
-            <element signature="e#24#53#0" expanded="true" />
+            <element signature="e#24#55#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/Models/Model.py">
+    <entry file="file://$PROJECT_DIR$/src/test2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9191176">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding />
+        <state vertical-scroll-proportion="0.24264705">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/Models/Results/porter/output.proximity">
+    <entry file="file://$PROJECT_DIR$/src/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.9338235">
+          <caret line="452" column="25" selection-start-line="452" selection-start-column="25" selection-end-line="452" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/TokenInfo.py">
+    <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Canonicalizer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="89" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
+          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/CacheWriter.py">
+    <entry file="file://$PROJECT_DIR$/src/Crawl/MemShareManager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="e#24#50#0" expanded="true" />
+            <element signature="e#24#72#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/__init__.py">
+    <entry file="file://$PROJECT_DIR$/src/Crawl/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/CacheReader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.04411765">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/IndexBuilder.py">
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="284" column="16" selection-start-line="284" selection-start-column="12" selection-end-line="284" selection-end-column="16" />
+        <state vertical-scroll-proportion="-0.32844576">
+          <caret line="413" column="8" selection-start-line="413" selection-start-column="8" selection-end-line="413" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/IndexManager.py">
+    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/lxml/etree/HTMLParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3313783">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="25" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="25" />
+          <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
           <folding>
-            <element signature="e#24#53#0" expanded="true" />
+            <element signature="e#24#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/Models/Proximity.py">
+    <entry file="file://$PROJECT_DIR$/src/Crawl/setup_es_.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/Models/MinSpanQueue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="11" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
-          <folding>
-            <element signature="e#25#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/Models/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="97" column="44" selection-start-line="118" selection-start-column="6" selection-end-line="122" selection-end-column="11" />
-          <folding>
-            <element signature="e#24#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RetrievalModel/Constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <caret line="78" column="36" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/Constants.py">
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/managers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.747445">
+          <caret line="465" column="6" selection-start-line="465" selection-start-column="6" selection-end-line="465" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/VB.py">
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/python-skeletons/multiprocessing/managers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28708133">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        <state vertical-scroll-proportion="1.4233576">
+          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/sharedctypes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3328467">
+          <caret line="128" column="4" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33235726">
+          <caret line="177" column="4" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding>
+            <element signature="e#24#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33235726">
+          <caret line="1286" column="4" selection-start-line="1286" selection-start-column="4" selection-end-line="1286" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/elasticsearch/client/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5080527">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/elasticsearch/client/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="242" column="48" selection-start-line="242" selection-start-column="41" selection-end-line="242" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RetrievalModel/IndexData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="112" column="30" selection-start-line="112" selection-start-column="15" selection-end-line="112" selection-end-column="30" />
+          <folding>
+            <element signature="e#25#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.8767772">
+          <caret line="181" column="25" selection-start-line="181" selection-start-column="25" selection-end-line="181" selection-end-column="25" />
+          <folding>
+            <element signature="e#24#75#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

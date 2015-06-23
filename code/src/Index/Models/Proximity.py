@@ -1,14 +1,12 @@
 __author__ = 'hanxuan'
 
-from Model import Model
-
-from RetrievalModel.LOG import log
-
-from MinSpanQueue import MinSpanQueue
-
 from collections import defaultdict
 
 import scipy as sp
+
+from Model import Model
+from Utils.LOG import log
+from MinSpanQueue import MinSpanQueue
 
 
 class Proximity(Model):
@@ -28,11 +26,13 @@ class Proximity(Model):
 
     def score(self):
         self.doc_token_mapping()
+        # lam = sp.log(0.8)
         for doc_id in self.uniq_doc_tokens:
             tokens = self.uniq_doc_tokens[doc_id]
             pos_list = self.tokens_pos_mapping(tokens, doc_id)
             min_span = MinSpanQueue(pos_list).min_span() + 1
             self.rank_list[doc_id] = 50 * sp.log(len(pos_list)) - sp.log(min_span * 1.0 / self.im.get_doc_len_by_id(doc_id))
+            # self.rank_list[doc_id] = (min_span - len(pos_list)) * 1.0 / len(pos_list) * lam
 
     def tokens_pos_mapping(self, tokens, doc_id):
         pos_list = []

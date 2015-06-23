@@ -12,6 +12,7 @@ def vb_encode(numbers):
                 break
             number /= 128
         bs[-1] += 128
+        print bs
         bytes_total += bs
     return pack('%dB' % len(bytes_total), *bytes_total)
 
@@ -29,7 +30,8 @@ def vb_decode(bytestream):
     return numbers
 
 
-# if __name__ == '__main__':
-#     numbers = [1, 12, 45, 23, 160968, 1, 56, 34, 84678, 27]
-#     print vb_decode(vb_encode(numbers))
-#     print len(vb_encode(numbers))
+if __name__ == '__main__':
+    # numbers = [1, 12, 45, 23, 160968, 1, 56, 34, 84678, 27]
+    numbers = [160968]
+    # print vb_decode(vb_encode(numbers))
+    print len(vb_encode(numbers))

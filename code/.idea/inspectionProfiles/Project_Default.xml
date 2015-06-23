@@ -13,6 +13,7 @@
           <option value="E231" />
           <option value="W601" />
           <option value="E501" />
+          <option value="E701" />
         </list>
       </option>
     </inspection_tool>
@@ -20,6 +21,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="M1.Models.LMLaplace.__init__" />
+          <option value="lxml.etree" />
         </list>
       </option>
     </inspection_tool>

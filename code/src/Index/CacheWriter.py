@@ -1,11 +1,9 @@
 __author__ = 'hanxuan'
 
-from Constants import I, B
-
-from RetrievalModel.LOG import log
-
 import struct
 
+from Constants import I, B
+from Utils.LOG import log
 from VB import vb_encode
 
 class CacheWriter(object):

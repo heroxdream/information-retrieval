@@ -1,19 +1,30 @@
 <component name="ProjectDictionaryState">
   <dictionary name="hanxuan">
     <words>
+      <w>addheaders</w>
       <w>bigram</w>
       <w>borda</w>
       <w>bordafuse</w>
+      <w>canonicalizer</w>
       <w>combmnz</w>
+      <w>defaultdict</w>
       <w>dlen</w>
       <w>hanxuan</w>
       <w>heapfy</w>
+      <w>independe</w>
+      <w>instagram</w>
       <w>lmdirichlet</w>
       <w>mbytes</w>
       <w>newfile</w>
       <w>oldfile</w>
       <w>poslist</w>
+      <w>prospero</w>
+      <w>snews</w>
+      <w>snntp</w>
       <w>stemmer</w>
+      <w>urlstring</w>
+      <w>urltuple</w>
+      <w>userinfo</w>
     </words>
   </dictionary>
 </component>

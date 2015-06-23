@@ -1,22 +1,16 @@
 __author__ = 'hanxuan'
 
-from RetrievalModel.Models.IRModel import IRModel
-
-from RetrievalModel.Constants import MEAN_LESS, SAFE_WORD, DESC_WORDS, STOP_WORDS, STEM, STRIP_S, DEL_BIG
-
-from RetrievalModel.Util import *
-
-from RetrievalModel.LOG import log
-
-from nltk import LancasterStemmer
-
-from nltk import PorterStemmer
-
-from nltk import SnowballStemmer
-
 import string
 
-from Index.IndexManager import IndexManager
+from nltk import LancasterStemmer
+from nltk import PorterStemmer
+from nltk import SnowballStemmer
+
+from RetrievalModel.Models.IRModel import IRModel
+from RetrievalModel.Constants import MEAN_LESS, SAFE_WORD, DESC_WORDS, STOP_WORDS, STEM, STRIP_S, DEL_BIG
+from RetrievalModel.Util import *
+from Utils.LOG import log
+
 
 class Model(IRModel):
     def __init__(self, query_str, im):

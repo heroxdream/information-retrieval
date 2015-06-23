@@ -1,14 +1,11 @@
 __author__ = 'Xuan Han'
 
-from RetrievalModel.DataLoader import doc_length, term_freq
-
-from RetrievalModel.Constants import V
-
-from RetrievalModel.Models.IRModel import IRModel
-
-from RetrievalModel.LOG import log
-
 import scipy as sp
+
+from RetrievalModel.DataLoader import doc_length, term_freq
+from RetrievalModel.Constants import V
+from RetrievalModel.Models.IRModel import IRModel
+from Utils.LOG import log
 
 
 class LMLaplace(IRModel):

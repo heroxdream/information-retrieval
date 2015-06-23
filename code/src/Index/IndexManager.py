@@ -1,18 +1,14 @@
 __author__ = 'hanxuan'
 
-from Index.Constants import *
-
 import cPickle as cP
+import glob
+import os
 
 import pylru
 
-import glob
-
-import os
-
+from Index.Constants import *
 from CacheReader import CacheReader
-
-from RetrievalModel.LOG import log
+from Utils.LOG import log
 
 
 class IndexManager(object):

@@ -1,12 +1,10 @@
 __author__ = 'hanxuan'
 
-from Index.Constants import V
-
-from Index.Models.Model import Model
-
-from RetrievalModel.LOG import log
-
 import scipy as sp
+
+from Index.Constants import V
+from Index.Models.Model import Model
+from Utils.LOG import log
 
 
 class LMLaplace(Model):

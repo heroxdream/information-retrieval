@@ -1,27 +1,17 @@
 __author__ = 'hanxuan'
 
 import re
-
 import os
-
 import glob
-
 import string
-
 import cPickle as cP
-
 import collections
-
 import time
 
-from RetrievalModel.LOG import log
-
+from Utils.LOG import log
 from RetrievalModel.Constants import FILE_DIR
-
 from RetrievalModel.Constants import STOP_WORDS
-
 from CacheReader import CacheReader
-
 from CacheWriter import CacheWriter
 
 # from nltk import LancasterStemmer

@@ -36,4 +36,4 @@ while True:
         break
     STOP_WORDS.add(line)
 STOP_WORDS_FILE.close()
-print 'stop_words count: ', len(STOP_WORDS)
+# print 'stop_words count: ', len(STOP_WORDS)

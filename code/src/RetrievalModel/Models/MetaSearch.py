@@ -1,26 +1,17 @@
 __author__ = 'Xuan Han'
 
-from IRModel import IRModel
-
-from LMJelinekMercer import LMJelinekMercer
-
-from LMLaplace import LMLaplace
-
-from OkapiBM25 import OkapiBM25
-
-from OkapiBM25PRF import OkapiBM25PRF
-
-from OkapiTF import OkapiTF
-
-from OkapiTF_IDF import OkapiTfIDF
-
-from RetrievalModel.Constants import D
-
-from RetrievalModel.Util import normalize_dict
-
-from RetrievalModel.LOG import log
-
 import collections
+
+from IRModel import IRModel
+from LMJelinekMercer import LMJelinekMercer
+from LMLaplace import LMLaplace
+from OkapiBM25 import OkapiBM25
+from OkapiBM25PRF import OkapiBM25PRF
+from OkapiTF import OkapiTF
+from OkapiTF_IDF import OkapiTfIDF
+from RetrievalModel.Constants import D
+from RetrievalModel.Util import normalize_dict
+from Utils.LOG import log
 
 
 class MetaSearch(IRModel):

@@ -1,11 +1,9 @@
 __author__ = 'hanxuan'
 
-
 import heapq as queue
-
 import sys
 
-from RetrievalModel.LOG import log
+from Utils.LOG import log
 
 
 class MinSpanQueue(object):
