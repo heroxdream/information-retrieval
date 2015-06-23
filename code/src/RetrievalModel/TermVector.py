@@ -6,7 +6,7 @@ import time
 import cPickle
 
 from Constants import DATA_SET
-from Utils.es import es
+from Utils.ues import es
 
 
 def term_trim(term):

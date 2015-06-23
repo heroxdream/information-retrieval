@@ -6,9 +6,9 @@ from collections import defaultdict
 
 import threading
 
-from Utils.log import log
+from Utils.uredis import rs
 
-from Utils.redis import rs
+from Utils.ulog import log
 
 import time
 
@@ -75,6 +75,7 @@ if __name__ == '__main__':
     # print f.pop_one()
 
     a = [1, 2, 3, 4, 5, 6, 7, 100, 19999999999]
+
     def f(count):
         count = min(FrontQueue.IN_LINK_MAX, count)
         print FrontQueue.LEVEL_LOW - 1 - (count - FrontQueue.LEVEL_HIGH) * 5.0 / (FrontQueue.IN_LINK_MAX - FrontQueue.LEVEL_HIGH)

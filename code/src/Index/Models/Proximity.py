@@ -5,7 +5,7 @@ from collections import defaultdict
 import scipy as sp
 
 from Model import Model
-from Utils.log import log
+from Utils.ulog import log
 from MinSpanQueue import MinSpanQueue
 
 

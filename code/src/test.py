@@ -462,9 +462,3 @@
 
 
 
-
-
-r.incr('url')
-
-print r.get('url'), type(r.get('url'))
-

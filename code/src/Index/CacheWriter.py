@@ -3,7 +3,7 @@ __author__ = 'hanxuan'
 import struct
 
 from Constants import I, B
-from Utils.log import log
+from Utils.ulog import log
 from VB import vb_encode
 
 class CacheWriter(object):

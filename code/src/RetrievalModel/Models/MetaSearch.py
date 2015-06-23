@@ -11,7 +11,7 @@ from OkapiTF import OkapiTF
 from OkapiTF_IDF import OkapiTfIDF
 from RetrievalModel.Constants import D
 from RetrievalModel.Util import normalize_dict
-from Utils.log import log
+from Utils.ulog import log
 
 
 class MetaSearch(IRModel):

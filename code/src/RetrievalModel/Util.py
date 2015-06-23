@@ -3,8 +3,8 @@ __author__ = 'Xuan Han'
 import string
 
 from Constants import DATA_SET
-from Utils.es import es
-from Utils.log import log
+from Utils.ues import es
+from Utils.ulog import log
 
 
 def strip_dot(term):

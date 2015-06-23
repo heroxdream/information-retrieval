@@ -3,7 +3,7 @@ __author__ = 'hanxuan'
 import heapq as queue
 import sys
 
-from Utils.log import log
+from Utils.ulog import log
 
 
 class MinSpanQueue(object):

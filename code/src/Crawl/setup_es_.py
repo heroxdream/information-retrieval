@@ -1,7 +1,7 @@
 __author__ = 'hanxuan'
 
 
-from Utils.es import es
+from Utils.ues import es
 
 DATA_SET = 'aiw'
 

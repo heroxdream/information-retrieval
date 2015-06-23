@@ -8,7 +8,7 @@ import pylru
 
 from Index.Constants import *
 from CacheReader import CacheReader
-from Utils.log import log
+from Utils.ulog import log
 
 
 class IndexManager(object):

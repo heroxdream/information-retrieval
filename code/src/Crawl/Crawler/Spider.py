@@ -14,13 +14,13 @@ from multiprocessing import Manager
 
 import multiprocessing
 
-from Utils.log import log
+from Utils.ulog import log
 
-from Utils.es import es
+from Utils.ues import es
 
 from Crawl.setup_es_ import create_index, DATA_SET
 
-from SpiderConfig import SpiderConfig
+# from SpiderConfig import SpiderConfig
 
 import time
 
@@ -34,7 +34,7 @@ import robotparser
 
 from Utils.network import get_host
 
-from Utils.redis import rs
+from Utils.uredis import rs
 
 
 class Spider(object):
@@ -106,14 +106,14 @@ class Spider(object):
 
         process_pool = []
         while True:
-            if spider.finished_page.value > self.max_tasks.value:
+            if Spider.finished_page.value > self.max_tasks.value:
                 log.info("############ ALL TASK DONE #############")
                 for p in process_pool:
                     if not p.is_alive():
                         log.debug('process not alive')
                         p.terminate()
                         process_pool.remove(p)
-                        with spider.lock: self.process_count.value -= 1
+                        with Spider.lock: self.process_count.value -= 1
                 time.sleep(1000)
                 continue
 
@@ -124,7 +124,7 @@ class Spider(object):
                         log.debug('process not alive')
                         p.terminate()
                         process_pool.remove(p)
-                        with spider.lock: self.process_count.value -= 1
+                        with Spider.lock: self.process_count.value -= 1
                 time.sleep(1)
                 continue
             url = connection.recv_bytes()
@@ -132,7 +132,7 @@ class Spider(object):
             p.daemon = True
             process_pool.append(p)
             p.start()
-            with spider.lock: self.process_count.value += 1
+            with Spider.lock: self.process_count.value += 1
         connection.close()
         listener.close()
 
@@ -182,35 +182,14 @@ class Spider(object):
             doc = dict(url=url, html=html, header=str(header), text=text, title=title, out_links=links)
             res = es.index(index=DATA_SET, doc_type='document', id=self.finished_page.value, body=doc, timeout=60)
             if res['created']:
-                with spider.lock: self.finished_page.value += 1
+                with Spider.lock: self.finished_page.value += 1
                 log.info('*********************** task{} finished: {} ***********************'.format(self.finished_page.value, title))
             return url
         except Exception, e:
-            with spider.lock: self.error_page.value += 1
+            with Spider.lock: self.error_page.value += 1
             log.info('ERROR{} ~ URL: {}'.format(self.error_page.value, url))
             log.info('ERROR MSG: {}'.format(e))
         finally:
             opener.close()
             return None
 
-if __name__ == '__main__':
-
-    es.indices.delete(index=DATA_SET, ignore=[400, 404])
-    create_index(es)
-
-    config = SpiderConfig()
-    config.max_threads = 50
-    config.seeds_path = '../seeds'
-    config.domain_fetch_time_span = 2000
-    config.max_tasks = 50
-
-    spider = Spider(config)
-    frontier = Frontier(config.domain_fetch_time_span)
-
-    frontier_service = Process(target=frontier.start)
-    spider_service = Process(target=spider.start)
-
-    frontier_service.start()
-    spider_service.start()
-    frontier_service.join()
-    spider_service.join()
