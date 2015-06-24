@@ -1,5 +1,5 @@
 __author__ = 'hanxuan'
-
+# code: utf-8
 import re
 from urlparse import urlparse
 

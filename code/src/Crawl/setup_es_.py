@@ -3,7 +3,7 @@ __author__ = 'hanxuan'
 
 from Utils.ues import es
 
-DATA_SET = 'aiw'
+DATA_SET = 'aiw10w'
 
 def create_index(client):
     # create empty index

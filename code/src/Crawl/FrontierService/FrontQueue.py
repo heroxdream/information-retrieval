@@ -6,8 +6,6 @@ from collections import defaultdict
 
 import threading
 
-from Utils.uredis import rs
-
 from Utils.ulog import log
 
 import time
@@ -22,10 +20,10 @@ class FrontQueue(object):
 
     def __init__(self):
         self.level_queue = defaultdict(Queue)
-        self.key_words = ['history', 'american', 'america', 'wikipedia', 'revolution', 'war', 'independe']
+        self.key_words = ['history', 'america', 'wikipedia', 'revolution', 'war', 'independe']
         self.content_size = 0
 
-    def __len__(self):
+    def size(self):
         return self.content_size
 
     def push_one(self, url):
@@ -35,8 +33,7 @@ class FrontQueue(object):
             self.content_size += 1
 
     def pop_one(self):
-
-        if self.__len__() == 0:
+        if self.size() == 0:
             log.info('NO url in FRONT_QUEUE, sleep 1 s')
             time.sleep(1)
 
@@ -47,18 +44,11 @@ class FrontQueue(object):
                     return level, self.level_queue[level].get()
 
     def level(self, url):
-
+        level = FrontQueue.LEVEL_LOW * 1.0
         for key_word in self.key_words:
-            if key_word in url:
-                return FrontQueue.LEVEL_HIGH
-
-        if rs.exists(url):
-            in_link_count = min(int(rs.get(url)), FrontQueue.IN_LINK_MAX)
-            log.debug("------------- REDIS {}-------------".format(in_link_count))
-            return FrontQueue.LEVEL_LOW - 1 - (in_link_count - FrontQueue.LEVEL_HIGH) * 5.0 /\
-                                              (FrontQueue.IN_LINK_MAX - FrontQueue.LEVEL_HIGH)
-
-        return FrontQueue.LEVEL_LOW
+            if key_word in url.lower():
+                level = max(FrontQueue.LEVEL_HIGH, level - 1)
+        return level
 
 
 if __name__ == '__main__':

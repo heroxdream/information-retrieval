@@ -17,8 +17,12 @@ class BackQueue(object):
     def __init__(self, time_span):
         self.domain_queues = defaultdict(PriorityQueue)
         self.time_stack = dict()
+        self.counter = 0
         self.domain_time_span = time_span
         log.info('BACK_QUEUE_TIME_SPAN: {} ms'.format(self.domain_time_span))
+
+    def size(self):
+        return self.counter
 
     def push_one(self, domain, tuple_value):
         if not self.domain_queues.has_key(domain):
@@ -27,6 +31,7 @@ class BackQueue(object):
             log.debug('time_stack: {}'.format(self.time_stack))
         with BackQueue.lock:
             self.domain_queues[domain].put(tuple_value)
+            self.counter += 1
         log.debug('domain: {}'.format(self.domain_queues))
 
     def pop_one(self, domain):
@@ -38,6 +43,7 @@ class BackQueue(object):
         else:
             with BackQueue.lock:
                 url = self.domain_queues[domain].get()[1]
+                self.counter += 1
                 self.time_stack[domain] = time.time() * 1000
                 return url
 

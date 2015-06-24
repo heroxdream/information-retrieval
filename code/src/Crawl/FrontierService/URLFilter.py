@@ -4,14 +4,16 @@ from Utils.ulog import log
 
 from pybloom import ScalableBloomFilter
 
-import mmh3
+from threading import RLock
 
 class URLFilter(object):
+
+    lock = RLock()
+
     def __init__(self):
         self.forbidden_keys = ['video', 'facebook', 'youtube', 'twitter', 'instagram', 'tv',
-                               'amazon', 'ebay', 'photo', 'image', 'game', 'shop']
+                               'amazon', 'ebay', 'photo', 'image', 'game', 'shop', 'foursquare']
         self.seen = ScalableBloomFilter(initial_capacity=10000, mode=ScalableBloomFilter.LARGE_SET_GROWTH)
-        # self.seen = set()
 
     def forbidden_key_word(self, url):
         for key_word in self.forbidden_keys:
@@ -31,9 +33,9 @@ class URLFilter(object):
             return True
 
     def pass_check(self, url):
-        hash_code = mmh3.hash64(url)
-        if hash_code in self.seen:
-            log.debug('## SEEN: {}'.format(url))
-            return False
-        self.seen.add(hash_code)
-        return self.forbidden_key_word(url) and self.is_english(url)
+        with URLFilter.lock:
+            if url in self.seen:
+                log.debug('## SEEN: {}'.format(url))
+                return False
+            self.seen.add(url)
+            return self.forbidden_key_word(url) and self.is_english(url)

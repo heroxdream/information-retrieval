@@ -12,11 +12,19 @@ from Crawl.MemShareManager import MemShareManager
 
 from Utils.network import get_host
 
+from FrontQueue import FrontQueue
+
+from Utils.uredis import rs
+
+import time
+
 
 class Frontier(object):
 
     PULL_IN_PORT = 9000
     PUSH_OUT_PORT = 9001
+
+    BACK_QUEUE_MIN = 10000
 
     def __init__(self, time_span):
         log.info('********** FRONTIER STARTED **********')
@@ -43,20 +51,31 @@ class Frontier(object):
         connection = listener.accept()
         log.info('Frontier : connection accepted from {}'.format(listener.address))
         while True:
-            url = connection.recv_bytes()
-            log.debug('url pull in: {}'.format(url))
-            if self.filter.pass_check(url):
-                self.front_queue.push_one(url)
-                log.debug('pass_check: {}'.format(url))
+            try:
+                url = connection.recv_bytes()
+                log.debug('url pull in: {}'.format(url))
+                if self.filter.pass_check(url):
+                    self.front_queue.push_one(url)
+                    log.debug('pass_check: {}'.format(url))
+            except Exception,e:
+                log.warning('Frontier PULL IN ERROR: {}'.format(e))
+                continue
         connection.close()
         listener.close()
 
     def front_to_back_process(self):
         while True:
+
+            if self.back_queue.size() > self.front_queue.size() * 0.1 and self.back_queue.size() > Frontier.BACK_QUEUE_MIN:
+                log.info('BACK_QUEUE ({}) > ({}), FRONT_QUEUE ({})'.
+                         format(self.back_queue.size(), self.front_queue.size() * 0.1, self.front_queue.size()))
+                time.sleep(10)
+
             level_url = self.front_queue.pop_one()
             if level_url:
                 level, url = level_url
                 domain = get_host(url)
+                level = min(level, self.new_level(url))
                 self.back_queue.push_one(domain, (level, url))
                 log.debug('F2B: level:{}, url:{}'.format(level, url))
 
@@ -64,12 +83,28 @@ class Frontier(object):
         address = ('127.0.0.1', Frontier.PUSH_OUT_PORT)
         connection = Client(address, authkey=self.authkey)
         log.info('Frontier : connection established from {}'.format(address))
+        counter = 0
         while True:
             url = self.back_queue.push_out()
             if url:
-                connection.send_bytes(url)
-                log.debug('FRONTIER PUSH OUT: {}'.format(url))
+                try:
+                    connection.send_bytes(url)
+                    counter += 1
+                    if counter > 2000:
+                        log.info('FRONTIER SIZE NOW ({})'.format(self.front_queue.size()))
+                        counter = 0
+                except Exception,e:
+                    log.warning('Frontier PUSH OUT ERROR:{}'.format(e))
+                    continue
         connection.close()
+
+    @staticmethod
+    def new_level(url):
+        if rs.exists(url):
+            in_link_count = min(int(rs.get(url)), FrontQueue.IN_LINK_MAX)
+            log.debug("------------- REDIS {}-------------".format(in_link_count))
+            return FrontQueue.LEVEL_LOW - 1 - (in_link_count - FrontQueue.LEVEL_HIGH) * 5.0 / \
+                                              (FrontQueue.IN_LINK_MAX - FrontQueue.LEVEL_HIGH)
 
     # def randomword1(self, len):
     #     return ''.join(random.choice(string.lowercase) for i in range(len))
