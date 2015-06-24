@@ -10,6 +10,8 @@ from Utils.ulog import log
 
 import time
 
+import math
+
 class FrontQueue(object):
 
     lock = threading.Lock()
@@ -47,8 +49,9 @@ class FrontQueue(object):
         level = FrontQueue.LEVEL_LOW * 1.0
         for key_word in self.key_words:
             if key_word in url.lower():
-                level = max(FrontQueue.LEVEL_HIGH, level - 1)
-        return level
+                level = max(FrontQueue.LEVEL_HIGH, level - 0.3)
+        log.debug('********************** level: {}'.format(level))
+        return math.floor(level)
 
 
 if __name__ == '__main__':

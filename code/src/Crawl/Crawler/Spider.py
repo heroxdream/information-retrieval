@@ -56,8 +56,6 @@ class Spider(object):
         self.error_page = mgr.Value('l', 0)
         self.finished_store = mgr.Value('l', 0)
         self.error_store = mgr.Value('l', 0)
-        self.crawl_pool_size = mgr.Value('l', 0)
-        self.store_pool_size = mgr.Value('l', 0)
 
     def start(self):
         p1 = Process(target=self.crawl)
@@ -117,9 +115,7 @@ class Spider(object):
         while True:
             try:
                 url = connection.recv_bytes()
-                with Spider.lock:
-                    self.url_queue_in.put(url)
-                    self.crawl_pool_size.value += 1
+                self.url_queue_in.put(url)
             except Exception, e:
                 log.warning('Spider PULL IN ERROR: {}'.format(e))
                 continue
@@ -156,11 +152,7 @@ class Spider(object):
                 log.info('NO URL in CRAWL QUEUE, sleep 1 second ...')
                 time.sleep(1)
                 continue
-
-            with Spider.lock:
-                url = self.url_queue_in.get()
-                self.crawl_pool_size.value -= 1
-
+            url = self.url_queue_in.get()
             p = Process(target=self.spider_task, args=(url,))
             p.daemon = True
 
@@ -227,22 +219,19 @@ class Spider(object):
                 html = response.read()
                 log.debug('HTML encode {}'.format(type(html)))
             except Exception, e:
-                with Spider.lock:
-                    self.error_page.value += 1
+                with Spider.lock: self.error_page.value += 1
                 log.info('HTML READ exception: {}'.format(e))
                 return None
 
             try:
                 tpl = url, str(header), html
-                with Spider.lock:
-                    self.html_queue.put(tpl)
-                    self.store_pool_size.value += 1
+                self.html_queue.put(tpl)
             except Exception,e:
                 log.warning('PUT HTML_QUEUE exception: {}'.format(e))
 
             with Spider.lock: self.finished_page.value += 1
             log.info('DONE SPIDER TASK {}/{}: {}'.
-                     format(self.finished_page.value, self.crawl_pool_size.value, url))
+                     format(self.finished_page.value, self.url_queue_in.qsize(), url))
             return url
         except Exception, e:
             with Spider.lock:
@@ -260,9 +249,7 @@ class Spider(object):
                 time.sleep(10)
                 continue
 
-            with Spider.lock:
-                url, header, html = self.html_queue.get()
-                self.store_pool_size.value -= 1
+            url, header, html = self.html_queue.get()
             try:
                 html = html.decode('utf-8','ignore')
             except Exception,e:
@@ -298,7 +285,7 @@ class Spider(object):
                 if res['created']:
                     with Spider.lock: self.finished_store.value += 1
                     log.info('DONE PARSER TASK {}/{} ~ {}'.
-                             format(self.finished_store.value, self.store_pool_size.value, self.error_store.value))
+                             format(self.finished_store.value, self.html_queue.qsize(), self.error_store.value))
             except Exception, e:
                 with Spider.lock:
                     self.error_store.value += 1

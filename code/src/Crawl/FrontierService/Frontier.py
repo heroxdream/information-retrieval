@@ -18,6 +18,8 @@ from Utils.uredis import rs
 
 import time
 
+import math
+
 
 class Frontier(object):
 
@@ -66,7 +68,7 @@ class Frontier(object):
     def front_to_back_process(self):
         while True:
 
-            if self.back_queue.size() > self.front_queue.size() * 0.1 and self.back_queue.size() > Frontier.BACK_QUEUE_MIN:
+            if self.back_queue.size() > self.front_queue.size() * 0.05 and self.back_queue.size() > Frontier.BACK_QUEUE_MIN:
                 log.info('BACK_QUEUE ({}) > ({}), FRONT_QUEUE ({})'.
                          format(self.back_queue.size(), self.front_queue.size() * 0.1, self.front_queue.size()))
                 time.sleep(10)
@@ -75,7 +77,7 @@ class Frontier(object):
             if level_url:
                 level, url = level_url
                 domain = get_host(url)
-                level = min(level, self.new_level(url))
+                if level: level = math.floor((level * 1.0 + self.new_level(url)) / 2)
                 self.back_queue.push_one(domain, (level, url))
                 log.debug('F2B: level:{}, url:{}'.format(level, url))
 
@@ -100,11 +102,13 @@ class Frontier(object):
 
     @staticmethod
     def new_level(url):
+        n_level = FrontQueue.LEVEL_LOW
         if rs.exists(url):
             in_link_count = min(int(rs.get(url)), FrontQueue.IN_LINK_MAX)
             log.debug("------------- REDIS {}-------------".format(in_link_count))
-            return FrontQueue.LEVEL_LOW - 1 - (in_link_count - FrontQueue.LEVEL_HIGH) * 5.0 / \
+            n_level = FrontQueue.LEVEL_LOW - 1 - (in_link_count - FrontQueue.LEVEL_HIGH) * 5.0 / \
                                               (FrontQueue.IN_LINK_MAX - FrontQueue.LEVEL_HIGH)
+        return n_level
 
     # def randomword1(self, len):
     #     return ''.join(random.choice(string.lowercase) for i in range(len))

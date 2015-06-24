@@ -43,7 +43,7 @@ class BackQueue(object):
         else:
             with BackQueue.lock:
                 url = self.domain_queues[domain].get()[1]
-                self.counter += 1
+                self.counter -= 1
                 self.time_stack[domain] = time.time() * 1000
                 return url
 
