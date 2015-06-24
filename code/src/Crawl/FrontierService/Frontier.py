@@ -26,7 +26,7 @@ class Frontier(object):
     PULL_IN_PORT = 9000
     PUSH_OUT_PORT = 9001
 
-    BACK_QUEUE_MIN = 10000
+    BACK_QUEUE_MAX = 10000
 
     def __init__(self, time_span):
         log.info('********** FRONTIER STARTED **********')
@@ -68,9 +68,9 @@ class Frontier(object):
     def front_to_back_process(self):
         while True:
 
-            if self.back_queue.size() > self.front_queue.size() * 0.05 and self.back_queue.size() > Frontier.BACK_QUEUE_MIN:
+            if self.back_queue.size() > Frontier.BACK_QUEUE_MAX:
                 log.info('BACK_QUEUE ({}) > ({}), FRONT_QUEUE ({})'.
-                         format(self.back_queue.size(), self.front_queue.size() * 0.1, self.front_queue.size()))
+                         format(self.back_queue.size(), Frontier.BACK_QUEUE_MAX, self.front_queue.size()))
                 time.sleep(10)
 
             level_url = self.front_queue.pop_one()
