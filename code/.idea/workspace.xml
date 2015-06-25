@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="BackQueue size control logic updated">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Crawl/DuplicateDetect.py" afterPath="$PROJECT_DIR$/src/Crawl/Crawler/DuplicateDetect.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/FrontierService/BackQueue.py" afterPath="$PROJECT_DIR$/src/Crawl/FrontierService/BackQueue.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/Crawler/Canonicalizer.py" afterPath="$PROJECT_DIR$/src/Crawl/Crawler/Canonicalizer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py" afterPath="$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py" afterPath="$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/Crawler/Parser.py" afterPath="$PROJECT_DIR$/src/Crawl/Crawler/Parser.py" />
+    <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="file encoding UTF-8 added, near-duplicate detecting added">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/Crawler/Spider.py" afterPath="$PROJECT_DIR$/src/Crawl/Crawler/Spider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py" afterPath="$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/hanxuan.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/hanxuan.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="InformationRetrieval.iws" />
@@ -46,8 +38,8 @@
       <file leaf-file-name="Spider.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.7830188">
-              <caret line="304" column="0" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
+            <state vertical-scroll-proportion="8.79717">
+              <caret line="278" column="28" selection-start-line="278" selection-start-column="28" selection-end-line="278" selection-end-column="28" />
               <folding>
                 <element signature="e#48#99#0" expanded="true" />
               </folding>
@@ -1037,7 +1029,13 @@
       <option name="project" value="LOCAL" />
       <updated>1435247603238</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="file encoding UTF-8 added, near-duplicate detecting added">
+      <created>1435256042039</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1435256042039</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -1117,7 +1115,8 @@
     <MESSAGE value="BackQueue size control update" />
     <MESSAGE value="Random Shuffle: FrontQueue &amp;&amp; BackQueue when push out" />
     <MESSAGE value="BackQueue size control logic updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="BackQueue size control logic updated" />
+    <MESSAGE value="file encoding UTF-8 added, near-duplicate detecting added" />
+    <option name="LAST_COMMIT_MESSAGE" value="file encoding UTF-8 added, near-duplicate detecting added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1576,8 +1575,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.7830188">
-          <caret line="304" column="0" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
+        <state vertical-scroll-proportion="8.79717">
+          <caret line="278" column="28" selection-start-line="278" selection-start-column="28" selection-end-line="278" selection-end-column="28" />
           <folding>
             <element signature="e#48#99#0" expanded="true" />
           </folding>

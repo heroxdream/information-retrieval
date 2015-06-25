@@ -275,9 +275,8 @@ class Spider(object):
                 if smh_index.get_near_dups(sm):
                     sh_counter += 1
                     log.info('DUPLICATE {} DETECTED FOR: {} / {}'.format(sh_counter, title, url))
-                    continue
-                else:
                     smh_index.add(str(sh_counter), sm)
+                    continue
             except Exception, e:
                 log.warning('SIMHASH exception: {}'.format(e))
 
