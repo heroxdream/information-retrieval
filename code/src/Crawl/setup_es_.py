@@ -3,7 +3,7 @@ __author__ = 'hanxuan'
 
 from Utils.ues import es
 
-DATA_SET = 'aiw10w'
+DATA_SET = 'aiw_test'
 
 def create_index(client):
     # create empty index
@@ -87,8 +87,6 @@ if __name__ == '__main__':
     es.cluster.health(wait_for_status='yellow', request_timeout=5)
     es.indices.delete(index=DATA_SET, ignore=[400, 404])
     create_index(es)
-
-
 
 
     # if spider.finished_page.value > config.max_tasks:

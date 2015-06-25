@@ -31,6 +31,8 @@ class Frontier(object):
 
     BACK_FRONT_RATIO = 0.1
 
+    BACK_QUEUE_DOMAIN_MIN = 14
+
     def __init__(self, time_span):
         log.info('********** FRONTIER STARTED **********')
         mgr = MemShareManager()
@@ -71,7 +73,13 @@ class Frontier(object):
 
     def front_to_back_process(self):
         while True:
-            if self.back_queue.size() > max(Frontier.BACK_QUEUE_MIN, self.front_queue.size() * Frontier.BACK_FRONT_RATIO):
+            # if self.back_queue.size() > max(Frontier.BACK_QUEUE_MIN, self.front_queue.size() * Frontier.BACK_FRONT_RATIO):
+            # log.info('BACK_QUEUE ({}) > ({}), FRONT_QUEUE ({}), DOMAIN IN BACK_QUEUE ({}) ,sleep {}'.
+            #          format(self.back_queue.size(), self.front_queue.size() * Frontier.BACK_FRONT_RATIO, self.front_queue.size(),
+            #                 self.back_queue.domain_count(), self.time_span.value / 1000))
+            if self.back_queue.domain_count() >= Frontier.BACK_QUEUE_DOMAIN_MIN:
+                log.info('BACK_QUEUE_DOMAIN ({}) > BACK_QUEUE_DOMAIN_MIN ({})'.
+                         format(self.back_queue.size(), Frontier.BACK_QUEUE_DOMAIN_MIN))
                 log.info('BACK_QUEUE ({}) > ({}), FRONT_QUEUE ({}), DOMAIN IN BACK_QUEUE ({}) ,sleep {}'.
                          format(self.back_queue.size(), self.front_queue.size() * Frontier.BACK_FRONT_RATIO, self.front_queue.size(),
                                 self.back_queue.domain_count(), self.time_span.value / 1000))

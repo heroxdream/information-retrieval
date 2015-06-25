@@ -58,18 +58,32 @@ class Spider(object):
         self.error_store = mgr.Value('l', 0)
 
     def start(self):
-        p1 = Process(target=self.crawl)
-        p2 = Process(target=self.push_out)
-        p3 = Process(target=self.pull_in)
-        p4 = Process(target=self.parse_task)
-        p1.start()
-        p2.start()
-        p3.start()
-        p4.start()
-        p1.join()
-        p2.join()
-        p3.join()
-        p4.join()
+        crawl_process = Process(target=self.crawl)
+        parse_process = Process(target=self.parse_task)
+        pull_in_process = Process(target=self.pull_in)
+        push_out_process = Process(target=self.push_out)
+        crawl_process.start()
+        pull_in_process.start()
+        push_out_process.start()
+        parse_process.start()
+        crawl_process.join()
+        pull_in_process.join()
+        push_out_process.join()
+        parse_process.join()
+
+    # def start(self):
+    #     p1 = Process(target=self.crawl)
+    #     p2 = Process(target=self.push_out)
+    #     p3 = Process(target=self.pull_in)
+    #     p4 = Process(target=self.parse_task)
+    #     p1.start()
+    #     p2.start()
+    #     p3.start()
+    #     p4.start()
+    #     p1.join()
+    #     p2.join()
+    #     p3.join()
+    #     p4.join()
 
     def load_seeds(self):
         seeds_path = self.config.seeds_path
@@ -123,7 +137,7 @@ class Spider(object):
         listener.close()
 
     def crawl(self):
-        process_pool = []
+        process_pool = set()
         while True:
             if self.finished_page.value > self.max_tasks.value:
                 log.info("############ ALL TASK DONE #############")
@@ -137,9 +151,9 @@ class Spider(object):
                 continue
 
             if self.process_count.value > self.max_threads.value:
-                log.info('Process Pool({}/{}) is full now'.
-                         format(self.process_count.value, self.max_threads.value))
-                for p in process_pool:
+                log.info('Process Pool({}/{}) {}is full now'.
+                         format(self.process_count.value, self.max_threads.value, len(process_pool)))
+                for p in process_pool.copy():
                     if not p.is_alive():
                         log.debug('process not alive')
                         p.terminate()
@@ -157,7 +171,7 @@ class Spider(object):
             p.daemon = True
 
             with Spider.lock:
-                process_pool.append(p)
+                process_pool.add(p)
                 self.process_count.value += 1
             p.start()
             p.join(0.1)

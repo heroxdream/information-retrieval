@@ -22,7 +22,7 @@ class FrontQueue(object):
 
     def __init__(self):
         self.level_queue = defaultdict(Queue)
-        self.key_words = ['history', 'america', 'wikipedia', 'revolution', 'war', 'independe']
+        self.key_words = ['america', 'revolution', 'war', 'independe']
         self._size = 0
         self.lock = mp.Lock()
 
@@ -60,7 +60,7 @@ class FrontQueue(object):
         level = FrontQueue.LEVEL_LOW * 1.0
         for key_word in self.key_words:
             if key_word in url.lower():
-                level = max(FrontQueue.LEVEL_HIGH, level - 0.2)
+                level = max(FrontQueue.LEVEL_HIGH, level - 0.5)
         log.debug('********************** level: {}'.format(level))
         return math.floor(level)
 
