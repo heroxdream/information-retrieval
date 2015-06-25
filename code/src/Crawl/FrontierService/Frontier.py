@@ -8,6 +8,8 @@ from multiprocessing.connection import Client
 
 from multiprocessing import Process
 
+from multiprocessing import Manager
+
 from Crawl.MemShareManager import MemShareManager
 
 from Utils.network import get_host
@@ -25,8 +27,9 @@ class Frontier(object):
 
     PULL_IN_PORT = 9000
     PUSH_OUT_PORT = 9001
+    BACK_QUEUE_MIN = 20000
 
-    BACK_QUEUE_MAX = 10000
+    BACK_FRONT_RATIO = 0.1
 
     def __init__(self, time_span):
         log.info('********** FRONTIER STARTED **********')
@@ -35,6 +38,7 @@ class Frontier(object):
         self.front_queue = mgr.FrontQueue()
         self.back_queue = mgr.BackQueue(time_span)
         self.filter = mgr.URLFilter()
+        self.time_span = Manager().Value('l', time_span)
         self.authkey = 'han.xuan'
 
     def start(self):
@@ -67,12 +71,11 @@ class Frontier(object):
 
     def front_to_back_process(self):
         while True:
-
-            if self.back_queue.size() > Frontier.BACK_QUEUE_MAX:
-                log.info('BACK_QUEUE ({}) > ({}), FRONT_QUEUE ({})'.
-                         format(self.back_queue.size(), Frontier.BACK_QUEUE_MAX, self.front_queue.size()))
-                time.sleep(10)
-
+            if self.back_queue.size() > max(Frontier.BACK_QUEUE_MIN, self.front_queue.size() * Frontier.BACK_FRONT_RATIO):
+                log.info('BACK_QUEUE ({}) > ({}), FRONT_QUEUE ({}), DOMAIN IN BACK_QUEUE ({}) ,sleep {}'.
+                         format(self.back_queue.size(), self.front_queue.size() * Frontier.BACK_FRONT_RATIO, self.front_queue.size(),
+                                self.back_queue.domain_count(), self.time_span.value / 1000))
+                time.sleep(self.time_span.value / 1000)
             level_url = self.front_queue.pop_one()
             if level_url:
                 level, url = level_url
@@ -91,10 +94,9 @@ class Frontier(object):
             if url:
                 try:
                     connection.send_bytes(url)
-                    counter += 1
-                    if counter > 2000:
-                        log.info('FRONTIER SIZE NOW ({})'.format(self.front_queue.size()))
-                        counter = 0
+                    if counter % 2000 == 0:
+                        log.info('FRONTIER PUSH TOTAL: {}'.format(counter))
+                        counter += 1
                 except Exception,e:
                     log.warning('Frontier PUSH OUT ERROR:{}'.format(e))
                     continue

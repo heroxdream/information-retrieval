@@ -22,9 +22,9 @@ if __name__ == '__main__':
     create_index(es)
 
     config = SpiderConfig()
-    config.max_threads = 50
+    config.max_threads = 25
     config.seeds_path = './seeds'
-    config.domain_fetch_time_span = 2000
+    config.domain_fetch_time_span = 1000
     config.max_tasks = 1000000000
 
     spider = Spider(config)
