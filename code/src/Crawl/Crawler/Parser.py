@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = 'hanxuan'
 
 from lxml import etree
@@ -6,7 +7,7 @@ import urllib2
 
 import time
 
-from Crawl.setup_es_ import DATA_SET, es, create_index
+from Crawl.setup_es_ import DATA_SET, es
 
 from Canonicalizer import Canonicalizer
 

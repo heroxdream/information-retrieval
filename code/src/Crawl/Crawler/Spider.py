@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = 'hanxuan'
 
 from Crawl.FrontierService.Frontier import Frontier
@@ -32,6 +33,8 @@ from Utils.uredis import rs
 
 import threading
 
+from simhash import SimhashIndex, Simhash
+
 
 class Spider(object):
     lock = threading.Lock()
@@ -51,7 +54,6 @@ class Spider(object):
         self.load_seeds()
         self.max_threads = mgr.Value('l', self.config.max_threads)
         self.max_tasks = mgr.Value('l', self.config.max_tasks)
-        self.process_count = mgr.Value('l', 0)
         self.finished_page = mgr.Value('l', 0)
         self.error_page = mgr.Value('l', 0)
         self.finished_store = mgr.Value('l', 0)
@@ -70,20 +72,6 @@ class Spider(object):
         pull_in_process.join()
         push_out_process.join()
         parse_process.join()
-
-    # def start(self):
-    #     p1 = Process(target=self.crawl)
-    #     p2 = Process(target=self.push_out)
-    #     p3 = Process(target=self.pull_in)
-    #     p4 = Process(target=self.parse_task)
-    #     p1.start()
-    #     p2.start()
-    #     p3.start()
-    #     p4.start()
-    #     p1.join()
-    #     p2.join()
-    #     p3.join()
-    #     p4.join()
 
     def load_seeds(self):
         seeds_path = self.config.seeds_path
@@ -146,19 +134,17 @@ class Spider(object):
                         log.debug('process not alive')
                         p.terminate()
                         process_pool.remove(p)
-                        with Spider.lock: self.process_count.value -= 1
                 time.sleep(1000)
                 continue
 
-            if self.process_count.value > self.max_threads.value:
-                log.info('Process Pool({}/{}) {}is full now'.
-                         format(self.process_count.value, self.max_threads.value, len(process_pool)))
+            if len(process_pool) > self.max_threads.value:
+                log.info('POOL({}/{}) is full now'.
+                         format(len(process_pool), self.max_threads.value))
                 for p in process_pool.copy():
                     if not p.is_alive():
                         log.debug('process not alive')
                         p.terminate()
                         process_pool.remove(p)
-                        with Spider.lock: self.process_count.value -= 1
                 time.sleep(0.5)
                 continue
 
@@ -170,9 +156,7 @@ class Spider(object):
             p = Process(target=self.spider_task, args=(url,))
             p.daemon = True
 
-            with Spider.lock:
-                process_pool.add(p)
-                self.process_count.value += 1
+            with Spider.lock: process_pool.add(p)
             p.start()
             p.join(0.1)
 
@@ -257,6 +241,9 @@ class Spider(object):
 
     def parse_task(self):
 
+        smh_index = SimhashIndex([], k=3)
+        sh_counter = 0
+
         while True:
             if self.html_queue.empty():
                 log.info('EMPTY html_queue, sleep 1 seconds ...')
@@ -283,6 +270,17 @@ class Spider(object):
             except Exception, e:
                 log.warning('PARSER exception: {}'.format(e))
 
+            try:
+                sm = Simhash(text)
+                if smh_index.get_near_dups(sm):
+                    sh_counter += 1
+                    log.info('DUPLICATE {} DETECTED FOR: {} / {}'.format(sh_counter, title, url))
+                    continue
+                else:
+                    smh_index.add(str(sh_counter), sm)
+            except Exception, e:
+                log.warning('SIMHASH exception: {}'.format(e))
+
             for link in links:
                 try:
                     self.url_queue_out.put(link)
@@ -304,4 +302,3 @@ class Spider(object):
                 with Spider.lock:
                     self.error_store.value += 1
                 log.warning('ES exception: {}'.format(e))
-

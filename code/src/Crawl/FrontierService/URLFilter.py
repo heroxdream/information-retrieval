@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = 'hanxuan'
 
 from Utils.ulog import log

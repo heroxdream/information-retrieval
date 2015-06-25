@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="Random Shuffle: FrontQueue &amp;&amp; BackQueue when push out">
+    <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="BackQueue size control logic updated">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Crawl/DuplicateDetect.py" afterPath="$PROJECT_DIR$/src/Crawl/Crawler/DuplicateDetect.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/FrontierService/BackQueue.py" afterPath="$PROJECT_DIR$/src/Crawl/FrontierService/BackQueue.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/Crawler/Canonicalizer.py" afterPath="$PROJECT_DIR$/src/Crawl/Crawler/Canonicalizer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py" afterPath="$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py" afterPath="$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/Main.py" afterPath="$PROJECT_DIR$/src/Crawl/Main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/Crawler/Parser.py" afterPath="$PROJECT_DIR$/src/Crawl/Crawler/Parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/Crawler/Spider.py" afterPath="$PROJECT_DIR$/src/Crawl/Crawler/Spider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/setup_es_.py" afterPath="$PROJECT_DIR$/src/Crawl/setup_es_.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py" afterPath="$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/hanxuan.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/hanxuan.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="InformationRetrieval.iws" />
@@ -33,29 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/Crawl/Main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-              <folding>
-                <element signature="e#23#73#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup_es_.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Crawl/setup_es_.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="82" column="28" selection-start-line="80" selection-start-column="0" selection-end-line="82" selection-end-column="28" />
+              <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -64,44 +46,10 @@
       <file leaf-file-name="Spider.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4386792">
-              <caret line="240" column="38" selection-start-line="240" selection-start-column="38" selection-end-line="240" selection-end-column="38" />
+            <state vertical-scroll-proportion="2.7830188">
+              <caret line="304" column="0" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
               <folding>
-                <element signature="e#24#75#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="URLFilter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="94" selection-start-line="14" selection-start-column="94" selection-end-line="14" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="process.py" pinned="false" current-in-tab="false">
-        <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/process.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="157" column="23" selection-start-line="157" selection-start-column="23" selection-end-line="157" selection-end-column="23" />
-              <folding>
-                <element signature="e#1702#1711#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrontQueue.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
-              <folding>
-                <element signature="e#24#47#0" expanded="true" />
+                <element signature="e#48#99#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,9 +59,9 @@
         <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="85" column="54" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="54" />
+              <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
               <folding>
-                <element signature="e#24#50#0" expanded="true" />
+                <element signature="e#48#74#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,7 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/RetrievalModel/Models/OkapiBM25PRF.py" />
         <option value="$PROJECT_DIR$/src/Index/Test/ap2.txt" />
         <option value="$PROJECT_DIR$/src/Index/Test/ap1.txt" />
         <option value="$PROJECT_DIR$/src/Index/Test/ap3.txt" />
@@ -182,24 +129,25 @@
         <option value="$PROJECT_DIR$/src/Crawl/FrontierService/Main.py" />
         <option value="$PROJECT_DIR$/src/Utils/LOG.py" />
         <option value="$PROJECT_DIR$/src/Crawl/Crawler/SpiderConfig.py" />
-        <option value="$PROJECT_DIR$/src/Crawl/Crawler/Canonicalizer.py" />
         <option value="$PROJECT_DIR$/src/Crawl/MemShareManager.py" />
         <option value="$PROJECT_DIR$/src/test2.py" />
-        <option value="$PROJECT_DIR$/src/Crawl/Crawler/Parser.py" />
         <option value="$PROJECT_DIR$/src/Utils/REDIS.py" />
         <option value="$PROJECT_DIR$/out/production/code/Crawl/FrontierService/Frontier.py" />
         <option value="$PROJECT_DIR$/out/production/code/Utils/uredis.py" />
         <option value="$PROJECT_DIR$/src/test.py" />
         <option value="$PROJECT_DIR$/src/Utils/uredis.py" />
         <option value="$PROJECT_DIR$/out/production/code/test.py" />
-        <option value="$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py" />
         <option value="$PROJECT_DIR$/src/Utils/network.py" />
-        <option value="$PROJECT_DIR$/src/Crawl/FrontierService/BackQueue.py" />
         <option value="$PROJECT_DIR$/src/Crawl/setup_es_.py" />
-        <option value="$PROJECT_DIR$/src/Crawl/Crawler/Spider.py" />
         <option value="$PROJECT_DIR$/src/Crawl/Main.py" />
-        <option value="$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py" />
         <option value="$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/FrontierService/BackQueue.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Crawler/Canonicalizer.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Crawler/Parser.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Crawler/DuplicateDetect.py" />
+        <option value="$PROJECT_DIR$/src/Crawl/Crawler/Spider.py" />
       </list>
     </option>
   </component>
@@ -423,25 +371,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Frontier" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <log_file path="$PROJECT_DIR$/../../log/es.log" checked="true" skipped="true" show_all="false" alias="mylog" />
-      <output_file path="$PROJECT_DIR$/../../log/cons.log" is_save="true" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Crawl/FrontierService" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="Spider" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <log_file path="$PROJECT_DIR$/../../log/es.log" checked="true" skipped="true" show_all="false" alias="mylog" />
       <output_file path="$PROJECT_DIR$/../../log/cons.log" is_save="true" />
@@ -495,6 +424,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Crawl/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DuplicateDetect" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <log_file path="$PROJECT_DIR$/../../log/es.log" checked="true" skipped="true" show_all="false" alias="mylog" />
+      <output_file path="$PROJECT_DIR$/../../log/cons.log" is_save="true" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Crawl/Crawler" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Crawl/Crawler/DuplicateDetect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -813,18 +761,18 @@
       <item index="0" class="java.lang.String" itemvalue="Python.FrontQueue" />
       <item index="1" class="java.lang.String" itemvalue="Python.test" />
       <item index="2" class="java.lang.String" itemvalue="Python.Parser" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Frontier" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Spider" />
-      <item index="5" class="java.lang.String" itemvalue="Python.test2" />
-      <item index="6" class="java.lang.String" itemvalue="Python.Main" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Spider" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test2" />
+      <item index="5" class="java.lang.String" itemvalue="Python.Main" />
+      <item index="6" class="java.lang.String" itemvalue="Python.DuplicateDetect" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Spider" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Parser" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Frontier" />
+        <item index="1" class="java.lang.String" itemvalue="Python.DuplicateDetect" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Spider" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Parser" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test2" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1083,7 +1031,13 @@
       <option name="project" value="LOCAL" />
       <updated>1435200477014</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="BackQueue size control logic updated">
+      <created>1435247603238</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1435247603238</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -1162,7 +1116,8 @@
     <MESSAGE value="BackQueue bug fixed" />
     <MESSAGE value="BackQueue size control update" />
     <MESSAGE value="Random Shuffle: FrontQueue &amp;&amp; BackQueue when push out" />
-    <option name="LAST_COMMIT_MESSAGE" value="Random Shuffle: FrontQueue &amp;&amp; BackQueue when push out" />
+    <MESSAGE value="BackQueue size control logic updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="BackQueue size control logic updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1197,41 +1152,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/RetrievalModel/Constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/gevent/threadpool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1804949">
-          <caret line="251" column="8" selection-start-line="251" selection-start-column="8" selection-end-line="251" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/python-skeletons/multiprocessing/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3313783">
-          <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/pool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.56305">
-          <caret line="523" column="8" selection-start-line="523" selection-start-column="8" selection-end-line="523" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/threadpool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3632353">
-          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/exceptions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3313783">
@@ -1401,7 +1321,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="e#37#46#0" expanded="true" />
+            <element signature="e#37#46#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1446,14 +1366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44264707">
-          <caret line="175" column="14" selection-start-line="175" selection-start-column="14" selection-end-line="175" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/Queue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26617646">
@@ -1478,50 +1390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/SpiderConfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Canonicalizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-          <folding>
-            <element signature="e#24#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/BackQueue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="33" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="33" />
-          <folding>
-            <element signature="e#24#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Crawl/setup_es_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/_multiprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33235294">
@@ -1535,61 +1403,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="157" column="23" selection-start-line="157" selection-start-column="23" selection-end-line="157" selection-end-column="23" />
           <folding>
-            <element signature="e#1702#1711#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33235294">
-          <caret line="3968" column="8" selection-start-line="3968" selection-start-column="8" selection-end-line="3968" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="28" selection-start-line="80" selection-start-column="0" selection-end-line="82" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Crawl/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <element signature="e#23#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="54" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="54" />
-          <folding>
-            <element signature="e#24#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="94" selection-start-line="14" selection-start-column="94" selection-end-line="14" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
+            <element signature="e#1702#1711#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1610,12 +1424,162 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/setup_es_.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/__future__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6102941">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/simhash/simcache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.05147">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46470588">
+          <caret line="1773" column="43" selection-start-line="1773" selection-start-column="37" selection-end-line="1773" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/simhash/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33235294">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <element signature="e#31#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/BackQueue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding>
+            <element signature="e#48#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/FrontQueue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding>
+            <element signature="e#48#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Canonicalizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding>
+            <element signature="e#48#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/DuplicateDetect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#48#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="27" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="27" />
+          <folding>
+            <element signature="e#48#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/SpiderConfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4368932">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/URLFilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/Frontier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding>
+            <element signature="e#48#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2794118">
+          <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Crawl/Crawler/Spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4386792">
-          <caret line="240" column="38" selection-start-line="240" selection-start-column="38" selection-end-line="240" selection-end-column="38" />
+        <state vertical-scroll-proportion="2.7830188">
+          <caret line="304" column="0" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
           <folding>
-            <element signature="e#24#75#0" expanded="true" />
+            <element signature="e#48#99#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = 'hanxuan'
 
 from urlparse import urlparse, urlunparse

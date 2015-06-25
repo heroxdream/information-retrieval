@@ -3,6 +3,7 @@
     <words>
       <w>addheaders</w>
       <w>bigram</w>
+      <w>blar</w>
       <w>borda</w>
       <w>bordafuse</w>
       <w>canonicalizer</w>
@@ -21,6 +22,7 @@
       <w>oldfile</w>
       <w>poslist</w>
       <w>prospero</w>
+      <w>simhash</w>
       <w>snews</w>
       <w>snntp</w>
       <w>stemmer</w>
