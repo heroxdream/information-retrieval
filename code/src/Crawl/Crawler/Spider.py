@@ -127,7 +127,7 @@ class Spider(object):
     def crawl(self):
         process_pool = set()
         while True:
-            if self.finished_page.value > self.max_tasks.value:
+            if self.finished_store.value > self.max_tasks.value:
                 log.info("############ ALL TASK DONE #############")
                 for p in process_pool:
                     if not p.is_alive():
@@ -275,10 +275,11 @@ class Spider(object):
                 if smh_index.get_near_dups(sm):
                     sh_counter += 1
                     log.info('DUPLICATE {} DETECTED FOR: {} / {}'.format(sh_counter, title, url))
-                    smh_index.add(str(sh_counter), sm)
                     continue
             except Exception, e:
                 log.warning('SIMHASH exception: {}'.format(e))
+            finally:
+                smh_index.add(str(sh_counter), sm)  # very important step to do.
 
             for link in links:
                 try:
