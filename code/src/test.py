@@ -460,5 +460,35 @@
 
     # start()
 
+# from simhash import Simhash, SimhashIndex
+# idx = SimhashIndex([], k=4)
+# for i in xrange(1, 10000):
+#     sm = Simhash(str(i))
+#     idx.add(str(i), sm)
+#     print idx.bucket_size()
+
+# import mmh3
+#
+# print mmh3.hash('http://www.history.com')
+#
+# import string
+# # print string.strip('http://en.wiktionary.org/', '/')
+#
+# print string.strip('http://en.wiktionary.org/', '/')
 
 
+from Utils.ues import es
+
+index = 'aiw_test'
+
+in_links = set()
+in_links.add('1')
+in_links.add('2')
+in_links.add('3')
+in_links.add('4')
+
+# doc = dict(in_links=list(in_links))
+res = es.update(index=index, doc_type='document', id=1, body={'doc':{'title':'21341'}}, timeout=60)
+
+
+# print res['created']

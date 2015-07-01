@@ -18,14 +18,14 @@ if __name__ == '__main__':
 
     rs.flushall()
 
-    es.indices.delete(index=DATA_SET, ignore=[400, 404])
-    create_index(es)
+    # es.indices.delete(index=DATA_SET, ignore=[400, 404])
+    # create_index(es)
 
     config = SpiderConfig()
-    config.max_threads = 50
-    config.seeds_path = './seeds'
+    config.max_threads = 2
+    config.seeds_path = './seeds3'
     config.domain_fetch_time_span = 1000
-    config.max_tasks = 1000000000
+    config.max_tasks = 200
 
     spider = Spider(config)
     frontier = Frontier(config.domain_fetch_time_span)

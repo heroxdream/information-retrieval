@@ -1,9 +1,8 @@
 __author__ = 'hanxuan'
 
+from Utils.ucluster import cluster
 
-from Utils.ues import es
-
-DATA_SET = 'aiw'
+DATA_SET = 'm_x_h_cluster_2'
 
 def create_index(client):
     # create empty index
@@ -15,8 +14,8 @@ def create_index(client):
                     "store": {
                         "type": "default"
                     },
-                    "number_of_shards": 1,
-                    "number_of_replicas": 1
+                    "number_of_shards": 3,
+                    "number_of_replicas": 2
                 },
                 # custom analyzer for analyzing file paths
                 'analysis': {
@@ -39,17 +38,19 @@ def create_index(client):
         body={
             'document': {
                 "properties": {
-                    "url": {
+                    "docno": {
                         "type": "string",
                         "store": True,
-                        "index": "no"
+                        "index": "analyzed",
+                        "term_vector": "with_positions_offsets_payloads",
+                        "analyzer": "my_english"
                     },
-                    "header": {
+                    "HTTPheader": {
                         "type": "string",
                         "store": True,
-                        "index": "no"
+                        "index": "not_analyzed"
                     },
-                    "html": {
+                    "html_Source": {
                         "type": "string",
                         "store": True,
                         "index": "no"
@@ -77,6 +78,13 @@ def create_index(client):
                         "type": "string",
                         "store": False,
                         "index": "no"
+                    },
+                    "author":{
+                        "type": "string",
+                        "store": True,
+                        "index": "analyzed",
+                        "term_vector": "with_positions_offsets_payloads",
+                        "analyzer": "my_english"
                     }
                 }
             }
@@ -84,6 +92,7 @@ def create_index(client):
     )
 
 if __name__ == '__main__':
-    es.cluster.health(wait_for_status='yellow', request_timeout=5)
-    es.indices.delete(index=DATA_SET, ignore=[400, 404])
-    create_index(es)
+
+    cluster.indices.delete(index=DATA_SET, ignore=[400, 404])
+    cluster.cluster.health(wait_for_status='yellow', request_timeout=5)
+    create_index(cluster)

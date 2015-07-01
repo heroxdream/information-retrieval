@@ -13,9 +13,12 @@ from multiprocessing import Manager
 
 from Utils.ulog import log
 
-from Utils.ues import es
+# from Utils.ues import es
+# from Crawl.setup_es_ import DATA_SET
 
-from Crawl.setup_es_ import DATA_SET
+from Utils.ucluster import cluster
+
+from Crawl.setup_cluster import DATA_SET
 
 import time
 
@@ -34,6 +37,10 @@ from Utils.uredis import rs
 import threading
 
 from simhash import SimhashIndex, Simhash
+
+import mmh3
+
+import string
 
 
 class Spider(object):
@@ -243,6 +250,7 @@ class Spider(object):
 
         smh_index = SimhashIndex([], k=3)
         sh_counter = 0
+        sh_id = 0
 
         while True:
             if self.html_queue.empty():
@@ -274,12 +282,14 @@ class Spider(object):
                 sm = Simhash(text)
                 if smh_index.get_near_dups(sm):
                     sh_counter += 1
+                    smh_index.add(str(sh_id), sm)  # very important step to do.
+                    sh_id += 1
                     log.info('DUPLICATE {} DETECTED FOR: {} / {}'.format(sh_counter, title, url))
                     continue
+                smh_index.add(str(sh_id), sm)  # very important step to do.
+                sh_id += 1
             except Exception, e:
                 log.warning('SIMHASH exception: {}'.format(e))
-            finally:
-                smh_index.add(str(sh_counter), sm)  # very important step to do.
 
             for link in links:
                 try:
@@ -292,8 +302,22 @@ class Spider(object):
                     log.warning('REDIS exception: {}'.format(e))
 
             try:
-                doc = dict(url=url, html=html, header=header, text=text, title=title, out_links=links)
-                res = es.index(index=DATA_SET, doc_type='document', id=self.finished_store.value, body=doc, timeout=60)
+                # doc = dict(url=url, html=html, header=header, text=text, title=title, out_links=links)
+                # res = es.index(index=DATA_SET, doc_type='document', id=self.finished_store.value, body=doc, timeout=60)
+                # if res['created']:
+                #     with Spider.lock: self.finished_store.value += 1
+                #     log.info('DONE PARSER TASK {}/{} ~ {}'.
+                #              format(self.finished_store.value, self.html_queue.qsize(), self.error_store.value))
+
+                url = string.strip(url, '/')
+                id_hash = mmh3.hash(url)
+
+                if cluster.exists(index=DATA_SET, id=id_hash):
+                    log.info('CLUSTER EXISTS: {}'.format(url))
+                    continue
+
+                doc = dict(docno=url, html_Source=html, HTTPheader=header, author='xuan', text=text, title=title, out_links=links)
+                res = cluster.index(index=DATA_SET, doc_type='document', id=id_hash, body=doc, timeout=60)
                 if res['created']:
                     with Spider.lock: self.finished_store.value += 1
                     log.info('DONE PARSER TASK {}/{} ~ {}'.

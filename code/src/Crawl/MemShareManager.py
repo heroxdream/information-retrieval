@@ -21,5 +21,4 @@ MemShareManager.register('URLFilter', URLFilter)
 MemShareManager.register('FrontQueue', FrontQueue)
 MemShareManager.register('ScalableBloomFilter', ScalableBloomFilter)
 MemShareManager.register('Queue', Queue)
-# MemShareManager.register('list', list)
 
