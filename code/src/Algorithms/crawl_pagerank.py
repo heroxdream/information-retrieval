@@ -10,6 +10,8 @@ from collections import defaultdict
 
 from Utils.ulog import log
 
+import util_methods
+
 data_set = 'aiw_yi'
 
 docno_id_map = dict()
@@ -17,7 +19,6 @@ id_docno_map = dict()
 
 def uniq_ids():
 
-    # idset = set()
     id_counter = 0
 
     body={
@@ -100,17 +101,8 @@ def run():
     pr = PageRank(aj_list)
     pr.loop()
 
-    score_map = pr.last_score
-    sorted_tuple = sorted(score_map.items(), key=lambda x:x[1], reverse=True)
-
-    counter = 0
-    for tpl in sorted_tuple:
-        url_id = tpl[0]
-        score = tpl[1]
-        log.info('{} | {}'.format(score, id_docno_map[url_id]))
-
-        counter += 1
-        if counter == 100: break
+    craw_pr_file = 'results/crawl.pagerank.500.txt'
+    util_methods.write_to_file(id_docno_map, pr.last_score, craw_pr_file)
 
 if __name__ == '__main__':
     run()

@@ -39,7 +39,7 @@ class PageRank(object):
                 else:
                     for each in self.nodes: self.current_score[each] += (1.0 - PageRank.ALPHA) * node_score / len(self.nodes)
 
-            log.info('SCORE: current {} ~ last {}'.format(sum(self.current_score.values()), sum(self.last_score.values())))
+            log.debug('SCORE: current {} ~ last {}'.format(sum(self.current_score.values()), sum(self.last_score.values())))
 
             self.last_score = self.current_score
             self.current_score = dict()
