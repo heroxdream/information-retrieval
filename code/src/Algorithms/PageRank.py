@@ -5,8 +5,8 @@ from Utils.ulog import log
 class PageRank(object):
 
     ALPHA = 0.15
-
-    MAX_ROUND = 20
+    THRESHOLD = 0.000001
+    MAX_ROUND = 5
 
     def __init__(self, adjacent_list):
         self.adjacent_list = adjacent_list
@@ -26,9 +26,12 @@ class PageRank(object):
 
             log.info('random access score sum {}'.format(sum(self.current_score.values())))
 
+            processed_nodes = 0
             for node in self.nodes:
 
                 node_score = self.last_score[node]
+
+                if node_score < PageRank.THRESHOLD: continue
 
                 out_links = self.adjacent_list[node]
 
@@ -39,7 +42,13 @@ class PageRank(object):
                 else:
                     for each in self.nodes: self.current_score[each] += (1.0 - PageRank.ALPHA) * node_score / len(self.nodes)
 
-            log.debug('SCORE: current {} ~ last {}'.format(sum(self.current_score.values()), sum(self.last_score.values())))
+                processed_nodes += 1
+
+            bonus = (sum(self.last_score.values()) * 1.0 - sum(self.current_score.values())) / len(self.nodes)
+            for i in self.nodes: self.current_score[i] += bonus
+
+            log.info('SCORE: current {} ~ last {} processed node: {}'.
+                     format(sum(self.current_score.values()), sum(self.last_score.values())), processed_nodes)
 
             self.last_score = self.current_score
             self.current_score = dict()

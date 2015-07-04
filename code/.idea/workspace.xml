@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="Pagerank finished">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithms/HITS.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithms/results/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithms/results/crawl.pagerank.500.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithms/crawl_hits.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithms/results/hits.authority.500.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithms/results/hits.hub.500.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithms/util_methods.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithms/PageRank.py" afterPath="$PROJECT_DIR$/src/Algorithms/PageRank.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithms/crawl_pagerank.py" afterPath="$PROJECT_DIR$/src/Algorithms/crawl_pagerank.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithms/other_graph_pagerank.py" afterPath="$PROJECT_DIR$/src/Algorithms/other_graph_pagerank.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="InformationRetrieval.iws" />
@@ -33,21 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="crawl_pagerank.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithms/crawl_pagerank.py">
+      <file leaf-file-name="other_graph_pagerank.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Algorithms/other_graph_pagerank.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="103" column="28" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="28" />
+              <caret line="34" column="79" selection-start-line="34" selection-start-column="79" selection-end-line="34" selection-end-column="79" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crawl.pagerank.500.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithms/results/crawl.pagerank.500.txt">
+      <file leaf-file-name="crawl_pagerank.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Algorithms/crawl_pagerank.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="50" />
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -57,57 +50,7 @@
         <entry file="file://$PROJECT_DIR$/src/Algorithms/crawl_hits.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="127" column="42" selection-start-line="127" selection-start-column="42" selection-end-line="127" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hits.authority.500.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithms/results/hits.authority.500.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hits.hub.500.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Algorithms/results/hits.hub.500.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3073394">
-              <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageRank.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithms/PageRank.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IRModel.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RetrievalModel/Models/IRModel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="112" column="16" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelTest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RetrievalModel/Models/ModelTest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+              <caret line="119" column="21" selection-start-line="115" selection-start-column="0" selection-end-line="119" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -123,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="merge.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Crawl/merge.py">
+      <file leaf-file-name="PageRank.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Algorithms/PageRank.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="61" column="9" selection-start-line="45" selection-start-column="8" selection-end-line="61" selection-end-column="9" />
+            <state vertical-scroll-proportion="1.7752293">
+              <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -208,12 +151,12 @@
         <option value="$PROJECT_DIR$/src/Crawl/Crawler/Spider.py" />
         <option value="$PROJECT_DIR$/src/Crawl/Main.py" />
         <option value="$PROJECT_DIR$/src/Algorithms/CrawlPagerank.py" />
-        <option value="$PROJECT_DIR$/src/Algorithms/other_graph_pagerank.py" />
         <option value="$PROJECT_DIR$/src/Algorithms/HITS.py" />
-        <option value="$PROJECT_DIR$/src/Algorithms/PageRank.py" />
         <option value="$PROJECT_DIR$/src/Algorithms/util_methods.py" />
         <option value="$PROJECT_DIR$/src/Algorithms/crawl_hits.py" />
         <option value="$PROJECT_DIR$/src/Algorithms/crawl_pagerank.py" />
+        <option value="$PROJECT_DIR$/src/Algorithms/other_graph_pagerank.py" />
+        <option value="$PROJECT_DIR$/src/Algorithms/PageRank.py" />
       </list>
     </option>
   </component>
@@ -321,28 +264,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InformationRetrieval" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Algorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="results" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -378,7 +299,7 @@
       <recent name="$PROJECT_DIR$/src/Crawl" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.crawl_hits">
+  <component name="RunManager" selected="Python.other_graph_pagerank">
     <configuration default="false" name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <log_file path="$PROJECT_DIR$/../../log/es.log" checked="true" skipped="true" show_all="false" alias="mylog" />
       <output_file path="$PROJECT_DIR$/../../log/cons.log" is_save="true" />
@@ -417,25 +338,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="reverse_in_link" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <log_file path="$PROJECT_DIR$/../../log/es.log" checked="true" skipped="true" show_all="false" alias="mylog" />
-      <output_file path="$PROJECT_DIR$/../../log/cons.log" is_save="true" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Crawl" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Crawl/reverse_in_link.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="crawl_pagerank" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <log_file path="$PROJECT_DIR$/../../log/es.log" checked="true" skipped="true" show_all="false" alias="mylog" />
       <output_file path="$PROJECT_DIR$/../../log/cons.log" is_save="true" />
@@ -470,6 +372,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Algorithms/crawl_hits.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="other_graph_pagerank" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <log_file path="$PROJECT_DIR$/../../log/es.log" checked="true" skipped="true" show_all="false" alias="mylog" />
+      <output_file path="$PROJECT_DIR$/../../log/cons.log" is_save="true" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Algorithms" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Algorithms/other_graph_pagerank.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -789,17 +710,17 @@
       <item index="1" class="java.lang.String" itemvalue="Python.test" />
       <item index="2" class="java.lang.String" itemvalue="Python.Main" />
       <item index="3" class="java.lang.String" itemvalue="Python.setup_cluster" />
-      <item index="4" class="java.lang.String" itemvalue="Python.reverse_in_link" />
-      <item index="5" class="java.lang.String" itemvalue="Python.crawl_pagerank" />
-      <item index="6" class="java.lang.String" itemvalue="Python.crawl_hits" />
+      <item index="4" class="java.lang.String" itemvalue="Python.crawl_pagerank" />
+      <item index="5" class="java.lang.String" itemvalue="Python.crawl_hits" />
+      <item index="6" class="java.lang.String" itemvalue="Python.other_graph_pagerank" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.crawl_hits" />
-        <item index="1" class="java.lang.String" itemvalue="Python.crawl_pagerank" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Main" />
-        <item index="3" class="java.lang.String" itemvalue="Python.setup_cluster" />
-        <item index="4" class="java.lang.String" itemvalue="Python.reverse_in_link" />
+        <item index="0" class="java.lang.String" itemvalue="Python.other_graph_pagerank" />
+        <item index="1" class="java.lang.String" itemvalue="Python.crawl_hits" />
+        <item index="2" class="java.lang.String" itemvalue="Python.crawl_pagerank" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Main" />
+        <item index="4" class="java.lang.String" itemvalue="Python.setup_cluster" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1094,7 +1015,13 @@
       <option name="project" value="LOCAL" />
       <updated>1435798855333</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Pagerank finished">
+      <created>1436048167906</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1436048167906</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -1452,14 +1379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithms/other_graph_pagerank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Crawl/reverse_in_link.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1532,34 +1451,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithms/PageRank.py">
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/results/hits.hub.500.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithms/HITS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithms/util_methods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49776787">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithms/crawl_pagerank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="103" column="28" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="28" />
+          <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
           <folding />
         </state>
       </provider>
@@ -1572,14 +1467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithms/crawl_hits.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="127" column="42" selection-start-line="127" selection-start-column="42" selection-end-line="127" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithms/results/hits.authority.500.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1588,10 +1475,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithms/results/hits.hub.500.txt">
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/util_methods.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3073394">
-          <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.6724891">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/HITS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/crawl_pagerank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/crawl_hits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="21" selection-start-line="115" selection-start-column="0" selection-end-line="119" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/other_graph_pagerank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="79" selection-start-line="34" selection-start-column="79" selection-end-line="34" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/PageRank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7752293">
+          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
           <folding />
         </state>
       </provider>
