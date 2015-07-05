@@ -2,6 +2,8 @@ __author__ = 'hanxuan'
 
 from Utils.ulog import log
 
+from util_methods import top_results
+
 class HITS(object):
 
     MAX_ROUND = 20
@@ -40,6 +42,12 @@ class HITS(object):
             round_counter += 1
 
         log.info('HITS finished...')
+
+    def top_hub(self, top_n):
+        return top_results(self.hub, top_n)
+
+    def top_authority(self, top_n):
+        return top_results(self.authority, top_n)
 
     @staticmethod
     def normalize(m):

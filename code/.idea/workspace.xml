@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="Pagerank finished">
+    <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="other pagerank finished. efficiency problem remains">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithms/results/other.pagerank.500.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithms/HITS.py" afterPath="$PROJECT_DIR$/src/Algorithms/HITS.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithms/PageRank.py" afterPath="$PROJECT_DIR$/src/Algorithms/PageRank.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithms/crawl_hits.py" afterPath="$PROJECT_DIR$/src/Algorithms/crawl_hits.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithms/crawl_pagerank.py" afterPath="$PROJECT_DIR$/src/Algorithms/crawl_pagerank.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/hanxuan.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/hanxuan.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithms/other_graph_pagerank.py" afterPath="$PROJECT_DIR$/src/Algorithms/other_graph_pagerank.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithms/util_methods.py" afterPath="$PROJECT_DIR$/src/Algorithms/util_methods.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="InformationRetrieval.iws" />
@@ -30,8 +36,10 @@
         <entry file="file://$PROJECT_DIR$/src/Algorithms/other_graph_pagerank.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="79" selection-start-line="34" selection-start-column="79" selection-end-line="34" selection-end-column="79" />
-              <folding />
+              <caret line="58" column="43" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="43" />
+              <folding>
+                <element signature="e#24#53#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,17 +48,17 @@
         <entry file="file://$PROJECT_DIR$/src/Algorithms/crawl_pagerank.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="21" />
+              <caret line="105" column="67" selection-start-line="105" selection-start-column="67" selection-end-line="105" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crawl_hits.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="crawl_hits.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Algorithms/crawl_hits.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="119" column="21" selection-start-line="115" selection-start-column="0" selection-end-line="119" selection-end-column="21" />
+            <state vertical-scroll-proportion="2.738532">
+              <caret line="139" column="9" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -60,17 +68,31 @@
         <entry file="file://$PROJECT_DIR$/src/Algorithms/HITS.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-              <folding />
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PageRank.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PageRank.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Algorithms/PageRank.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.7752293">
-              <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="util_methods.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Algorithms/util_methods.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="79" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -151,10 +173,10 @@
         <option value="$PROJECT_DIR$/src/Crawl/Crawler/Spider.py" />
         <option value="$PROJECT_DIR$/src/Crawl/Main.py" />
         <option value="$PROJECT_DIR$/src/Algorithms/CrawlPagerank.py" />
-        <option value="$PROJECT_DIR$/src/Algorithms/HITS.py" />
-        <option value="$PROJECT_DIR$/src/Algorithms/util_methods.py" />
-        <option value="$PROJECT_DIR$/src/Algorithms/crawl_hits.py" />
         <option value="$PROJECT_DIR$/src/Algorithms/crawl_pagerank.py" />
+        <option value="$PROJECT_DIR$/src/Algorithms/util_methods.py" />
+        <option value="$PROJECT_DIR$/src/Algorithms/HITS.py" />
+        <option value="$PROJECT_DIR$/src/Algorithms/crawl_hits.py" />
         <option value="$PROJECT_DIR$/src/Algorithms/other_graph_pagerank.py" />
         <option value="$PROJECT_DIR$/src/Algorithms/PageRank.py" />
       </list>
@@ -1021,7 +1043,13 @@
       <option name="project" value="LOCAL" />
       <updated>1436048167906</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="other pagerank finished. efficiency problem remains">
+      <created>1436050996857</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1436050996857</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -1041,11 +1069,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32770744" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6680731" sideWeight="0.54077256" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33426574" sideWeight="0.54363376" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.65594405" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33426574" sideWeight="0.45922747" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33426574" sideWeight="0.45636624" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.66433567" sideWeight="0.4874816" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25822604" sideWeight="0.48746517" order="0" side_tool="false" content_ui="combo" />
@@ -1077,7 +1105,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Output combmnz" />
     <MESSAGE value="B LM Model first commit" />
     <MESSAGE value="LM Dirichlet Models added..." />
     <MESSAGE value="changed to term_freq_short" />
@@ -1102,7 +1129,8 @@
     <MESSAGE value="near-duplicate bug fixed" />
     <MESSAGE value="merge finished &amp; EC2 finished" />
     <MESSAGE value="Pagerank finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pagerank finished" />
+    <MESSAGE value="other pagerank finished. efficiency problem remains" />
+    <option name="LAST_COMMIT_MESSAGE" value="other pagerank finished. efficiency problem remains" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1142,27 +1170,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Library/Python/2.7/site-packages/simhash/simcache.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.05147">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Crawl/FrontierService/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4368932">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2794118">
@@ -1475,34 +1482,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/exceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="79" column="6" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC14/python_stubs/348993582/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="527" column="4" selection-start-line="527" selection-start-column="4" selection-end-line="527" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/results/other.pagerank.500.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.0424106">
+          <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/PageRank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithms/util_methods.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6724891">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithms/HITS.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithms/crawl_pagerank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithms/crawl_hits.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="119" column="21" selection-start-line="115" selection-start-column="0" selection-end-line="119" selection-end-column="21" />
+          <caret line="42" column="79" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="79" />
           <folding />
         </state>
       </provider>
@@ -1510,15 +1527,35 @@
     <entry file="file://$PROJECT_DIR$/src/Algorithms/other_graph_pagerank.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="79" selection-start-line="34" selection-start-column="79" selection-end-line="34" selection-end-column="79" />
+          <caret line="58" column="43" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="43" />
+          <folding>
+            <element signature="e#24#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/crawl_pagerank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="67" selection-start-line="105" selection-start-column="67" selection-end-line="105" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithms/PageRank.py">
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/HITS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7752293">
-          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/crawl_hits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.738532">
+          <caret line="139" column="9" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
           <folding />
         </state>
       </provider>

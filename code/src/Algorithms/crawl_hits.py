@@ -127,12 +127,14 @@ def run():
 
     hits = HITS(out_link_map, in_link_map)
     hits.loop()
+    top_hub_500 = hits.top_hub(500)
+    top_aut_500 = hits.top_authority(500)
 
     hit_hub_file = 'results/hits.hub.500.txt'
-    util_methods.write_to_file(id_docno_map, hits.hub, hit_hub_file)
+    util_methods.write_to_file(id_docno_map, top_hub_500, hit_hub_file)
 
     hit_authority_file = 'results/hits.authority.500.txt'
-    util_methods.write_to_file(id_docno_map, hits.authority, hit_authority_file)
+    util_methods.write_to_file(id_docno_map, top_aut_500, hit_authority_file)
 
 if __name__ == '__main__':
     run()

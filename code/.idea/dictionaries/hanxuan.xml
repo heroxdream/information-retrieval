@@ -28,6 +28,7 @@
       <w>snews</w>
       <w>snntp</w>
       <w>stemmer</w>
+      <w>tpls</w>
       <w>urlstring</w>
       <w>urltuple</w>
       <w>userinfo</w>

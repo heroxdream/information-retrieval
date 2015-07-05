@@ -30,12 +30,15 @@ def uniq_url(data_set, es):
     return uniq_url_set
 
 
-def write_to_file(id_docno_map, data_map, file_path):
+def write_to_file(id_docno_map, top_list, file_path):
     out_file = open(file_path, 'w')
-    sorted_tuple = sorted(data_map.items(), key=lambda x:x[1], reverse=True)
-    counter = 0
-    for tpl in sorted_tuple:
+    for tpl in top_list:
         out_file.write('{}\t{}\n'.format(id_docno_map[tpl[0]],tpl[1]))
-        counter += 1
-        if counter > 500: break
     out_file.close()
+
+
+def top_results(data_map, top_n):
+    tpls = []
+    sorted_tuple = sorted(data_map.items(), key=lambda x:x[1], reverse=True)
+    for i in xrange(0, min(top_n, len(sorted_tuple))): tpls.append(sorted_tuple[i])
+    return tpls

@@ -2,10 +2,6 @@ __author__ = 'hanxuan'
 
 from PageRank import PageRank
 
-# from Utils.ucluster import cluster
-
-from Utils.ues import es
-
 from collections import defaultdict
 
 from Utils.ulog import log
@@ -57,9 +53,10 @@ def run():
 
     pr = PageRank(aj_list)
     pr.loop()
+    top_500 = pr.top_results(500)
 
     craw_pr_file = 'results/other.pagerank.500.txt'
-    util_methods.write_to_file(id_docno_map, pr.last_score, craw_pr_file)
+    util_methods.write_to_file(id_docno_map, top_500, craw_pr_file)
 
 if __name__ == '__main__':
     run()
