@@ -115,5 +115,3 @@ class SALSA(object):
             authority_tmp[authority] = a_score
 
         self.authority = authority_tmp
-
-
