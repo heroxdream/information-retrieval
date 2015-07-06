@@ -36,7 +36,7 @@ class SALSA(object):
 
         log.info('SALSA finished...')
 
-    def loop_hub(self):
+    def _loop_hub(self):
         hub_tmp = dict()
         for node in self.hub.iterkeys():
             hub_score_for_this_node = 0.0
@@ -54,7 +54,29 @@ class SALSA(object):
 
         self.hub = hub_tmp
 
-    def loop_authority(self):
+    def loop_hub(self):
+
+        hub_tmp = dict()
+
+        authority_score = dict()
+
+        for authority in self.authority.iterkeys():
+            hubs = self.in_link_map[authority]
+            a_score = 0.0
+            for hub in hubs:
+                a_score += self.hub[hub] * 1.0 / len(self.out_link_map[hub])
+            authority_score[authority] = a_score
+
+        for hub in self.hub.iterkeys():
+            authorities = self.out_link_map[hub]
+            h_score = 0.0
+            for authority in authorities:
+                h_score += (authority_score[authority] - self.hub[hub] * 1.0 / len(self.out_link_map[hub])) / len(self.in_link_map[authority])
+            hub_tmp[hub] = h_score
+
+        self.hub = hub_tmp
+
+    def obselete_loop_authority(self):
         authority_tmp = dict()
         for node in self.authority.iterkeys():
             authority_score_for_this_node = 0.0
@@ -69,6 +91,28 @@ class SALSA(object):
                     authority_score_for_this_node += authority_score * 1.0 / in_size / out_size
 
             authority_tmp[node] = authority_score_for_this_node
+
+        self.authority = authority_tmp
+
+    def loop_authority(self):
+
+        authority_tmp = dict()
+
+        hub_score = dict()
+
+        for hub in self.hub.iterkeys():
+            authorities = self.out_link_map[hub]
+            h_score = 0.0
+            for authority in authorities:
+                h_score += self.authority[authority] * 1.0 / len(self.in_link_map[authority])
+            hub_score[hub] = h_score
+
+        for authority in self.authority.iterkeys():
+            hubs = self.in_link_map[authority]
+            a_score = 0.0
+            for hub in hubs:
+                a_score += (hub_score[hub] - self.authority[authority] * 1.0 / len(self.in_link_map[authority])) / len(self.out_link_map[hub])
+            authority_tmp[authority] = a_score
 
         self.authority = authority_tmp
 
