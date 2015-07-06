@@ -1,6 +1,6 @@
 __author__ = 'hanxuan'
 
-from PageRank import PageRank
+from Algorithms.PageRank import PageRank
 
 # from Utils.ucluster import cluster
 
@@ -10,7 +10,7 @@ from collections import defaultdict
 
 from Utils.ulog import log
 
-import util_methods
+from Algorithms import util_methods
 
 data_set = 'aiw_yi'
 

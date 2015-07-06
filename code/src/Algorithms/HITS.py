@@ -24,7 +24,7 @@ class HITS(object):
 
         while round_counter < HITS.MAX_ROUND:
 
-            log.info('{} ROUND start...'.format(round_counter))
+            log.info('HITS {} ROUND start...'.format(round_counter))
 
             for node in self.nodes:
                 in_links = self.in_link_map[node]

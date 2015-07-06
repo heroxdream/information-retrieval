@@ -1,6 +1,8 @@
 __author__ = 'hanxuan'
 
-from HITS import HITS
+from Algorithms.HITS import HITS
+
+from Algorithms.SALSA import SALSA
 
 # from Utils.ucluster import cluster
 
@@ -10,7 +12,7 @@ from collections import defaultdict
 
 from Utils.ulog import log
 
-import util_methods
+from Algorithms import util_methods
 
 
 data_set = 'aiw_yi'
@@ -120,11 +122,12 @@ def put_to_maps(id_counter, url):
     return id_counter
 
 
-def run():
+def prepare():
     uniq_url_set = util_methods.uniq_url(data_set, es)
     generate_base_set(uniq_url_set)
     generate_out_in_links()
 
+def run_hits():
     hits = HITS(out_link_map, in_link_map)
     hits.loop()
     top_hub_500 = hits.top_hub(500)
@@ -136,5 +139,20 @@ def run():
     hit_authority_file = 'results/hits.authority.500.txt'
     util_methods.write_to_file(id_docno_map, top_aut_500, hit_authority_file)
 
+def run_salsa():
+
+    salsa = SALSA(out_link_map, in_link_map)
+    salsa.loop()
+    top_hub_500 = salsa.top_hub(500)
+    top_aut_500 = salsa.top_authority(500)
+
+    salsa_hub_file = 'results/salsa.hub.500.txt'
+    util_methods.write_to_file(id_docno_map, top_hub_500, salsa_hub_file)
+
+    salsa_authority_file = 'results/salsa.authority.500.txt'
+    util_methods.write_to_file(id_docno_map, top_aut_500, salsa_authority_file)
+
 if __name__ == '__main__':
-    run()
+    prepare()
+    run_hits()
+    run_salsa()

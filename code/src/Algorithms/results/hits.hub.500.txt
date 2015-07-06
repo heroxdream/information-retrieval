@@ -498,4 +498,3 @@ http://en.wikipedia.org/wiki/Philosophy_of_war	0.00191692034016
 http://en.wikipedia.org/wiki/Renegade_period_of_the_Apache_Wars	0.00191676026012
 http://en.wikipedia.org/wiki/Mexican_Indian_Wars	0.00191636900321
 http://en.wikipedia.org/wiki/Central_American_montane_forests	0.00191629839808
-http://en.wikipedia.org/wiki/Middle_America_Trench	0.00191629595156

@@ -1,12 +1,12 @@
 __author__ = 'hanxuan'
 
-from PageRank import PageRank
+from Algorithms.PageRank import PageRank
 
 from collections import defaultdict
 
 from Utils.ulog import log
 
-import util_methods
+from Algorithms import util_methods
 
 link_file = '/Users/hanxuan/Dropbox/neu/summer15/information retrieval/wt2g_inlinks.txt'
 

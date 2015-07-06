@@ -498,4 +498,3 @@ http://en.wikipedia.org/wiki/Category:Ethnic_groups_in_North_America	4.616726583
 http://en.wikipedia.org/wiki/Black_Hawk_War	4.57616039126e-05
 http://en.wikipedia.org/wiki/Americans_and_Canadians_in_Chile	4.57016440258e-05
 http://en.wikipedia.org/wiki/File:USA_declaration_independence.jpg	4.52509333069e-05
-http://en.wikipedia.org/wiki/Central_America_Volcanic_Arc	4.50536712735e-05
