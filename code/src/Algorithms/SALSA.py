@@ -36,7 +36,7 @@ class SALSA(object):
 
         log.info('SALSA finished...')
 
-    def _loop_hub(self):
+    def obsolete_loop_hub(self):
         hub_tmp = dict()
         for node in self.hub.iterkeys():
             hub_score_for_this_node = 0.0
@@ -76,7 +76,7 @@ class SALSA(object):
 
         self.hub = hub_tmp
 
-    def obselete_loop_authority(self):
+    def obsolete_loop_authority(self):
         authority_tmp = dict()
         for node in self.authority.iterkeys():
             authority_score_for_this_node = 0.0
