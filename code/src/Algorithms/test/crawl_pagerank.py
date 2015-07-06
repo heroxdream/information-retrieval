@@ -102,7 +102,7 @@ def run():
     pr.loop()
     top_500 = pr.top_results(500)
 
-    craw_pr_file = 'results/crawl.pagerank.500.txt'
+    craw_pr_file = 'results/pagerank.crawl.500.txt'
     util_methods.write_to_file(id_docno_map, top_500, craw_pr_file)
 
 if __name__ == '__main__':
