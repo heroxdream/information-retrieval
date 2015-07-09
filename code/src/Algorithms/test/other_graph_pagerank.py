@@ -21,15 +21,17 @@ def build_adjacent_list():
     edges = 0
 
     in_put_file = open(link_file, 'r')
+
     while True:
         line = in_put_file.readline()
 
         if line == '': break
 
-        groups = line.split(' ')
+        groups = line.split()
+
         node = groups[0]
         if node not in docno_id_map: id_counter = put_to_maps(id_counter, node)
-        if node not in adjacent_list: adjacent_list[docno_id_map[node]] = []
+        if docno_id_map[node] not in adjacent_list: adjacent_list[docno_id_map[node]] = []
 
         neighbours = groups[1:]
         for neighbour in neighbours:

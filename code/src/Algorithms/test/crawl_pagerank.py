@@ -2,9 +2,9 @@ __author__ = 'hanxuan'
 
 from Algorithms.PageRank import PageRank
 
-# from Utils.ucluster import cluster
+from Utils.ucluster import cluster
 
-from Utils.ues import es
+# from Utils.ues import es
 
 from collections import defaultdict
 
@@ -12,7 +12,8 @@ from Utils.ulog import log
 
 from Algorithms import util_methods
 
-data_set = 'aiw_yi'
+# data_set = 'aiw_yi'
+data_set = 'm_x_h_cluster'
 
 docno_id_map = dict()
 id_docno_map = dict()
@@ -22,24 +23,24 @@ def uniq_ids():
     id_counter = 0
 
     body={
-        "fields": ['url'],
+        "fields": ['docno'],
         "query": {
             "match_all": {}
         }
     }
 
-    resp = es.search(index=data_set, doc_type='document',body=body, explain=False, scroll="100m",size=2000)
+    resp = cluster.search(index=data_set, doc_type='document',body=body, explain=False, scroll="100m",size=1000)
 
     scrollId = resp['_scroll_id']
 
     while True:
         for i in resp['hits']['hits']:
-            url = i['fields']['url'][0]
+            url = i['fields']['docno'][0]
             docno_id_map[url] = id_counter
             id_docno_map[id_counter] = url
             id_counter += 1
 
-        resp = es.scroll(scroll_id=scrollId, scroll='100m')
+        resp = cluster.scroll(scroll_id=scrollId, scroll='100m')
         if len(resp['hits']['hits']) > 0:
             log.info('finish scroll once')
             scrollId = resp['_scroll_id']
@@ -54,18 +55,18 @@ def build_adjacent_list():
     adjacent_list = defaultdict(list)
 
     body = {
-        "fields": ['out_links', 'url'],
+        "fields": ['out_links', 'docno'],
         "query": {
             "match_all": {}
         }
     }
 
-    resp = es.search(index=data_set, doc_type='document',body=body, explain=False, scroll="100m", size=2000)
+    resp = cluster.search(index=data_set, doc_type='document',body=body, explain=False, scroll="100m", size=500)
     scrollId = resp['_scroll_id']
     while True:
         for i in resp['hits']['hits']:
 
-            url = i['fields']['url'][0]
+            url = i['fields']['docno'][0]
 
             url_id = docno_id_map[url]
 
@@ -76,7 +77,7 @@ def build_adjacent_list():
             for link in i['fields']['out_links']:
                 if link in docno_id_map: adjacent_list[url_id].append(docno_id_map[link])
 
-        resp = es.scroll(scroll_id = scrollId, scroll='100m')
+        resp = cluster.scroll(scroll_id = scrollId, scroll='100m')
         if len(resp['hits']['hits']) > 0:
             log.info('finish scroll once')
             scrollId = resp['_scroll_id']

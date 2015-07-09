@@ -2,13 +2,16 @@ __author__ = 'hanxuan'
 
 from Utils.ulog import log
 
-from util_methods import top_results
+from util_methods import top_results, perplexity, kl
+
+
+import copy
 
 class PageRank(object):
 
     ALPHA = 0.15
     THRESHOLD = 0.000001
-    MAX_ROUND = 5
+    MAX_ROUND = 50
 
     def __init__(self, adjacent_list):
         self.adjacent_list = adjacent_list
@@ -28,6 +31,17 @@ class PageRank(object):
     def top_results(self, top_n):
         for i in self.nodes: self.result[i] = self.last_score[i]
         return top_results(self.result, top_n)
+
+    def show_kl(self):
+        p = copy.copy(self.current_score)
+        q = copy.copy(self.last_score)
+        k_l = kl(p, q)
+        log.info('kl: {}'.format(k_l))
+
+    def show_perplexity(self):
+        p = copy.copy(self.current_score)
+        pp = perplexity(p)
+        log.info('perplexity: {}'.format(pp))
 
     def loop(self):
 
@@ -64,6 +78,9 @@ class PageRank(object):
             for i in self.nodes: self.current_score[i] += bonus_for_each
             log.info('SCORE: current {} ~ last {} processed node: {}'.
                      format(sum(self.current_score), sum(self.last_score), processed_nodes))
+
+            # self.show_perplexity()
+            # self.show_kl()
 
             tmp = self.last_score
             self.last_score = self.current_score

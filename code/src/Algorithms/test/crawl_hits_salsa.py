@@ -4,9 +4,9 @@ from Algorithms.HITS import HITS
 
 from Algorithms.SALSA import SALSA
 
-# from Utils.ucluster import cluster
+from Utils.ucluster import cluster
 
-from Utils.ues import es
+# from Utils.ues import es
 
 from collections import defaultdict
 
@@ -15,7 +15,10 @@ from Utils.ulog import log
 from Algorithms import util_methods
 
 
-data_set = 'aiw_yi'
+# data_set = 'aiw_yi'
+
+data_set = 'm_x_h_cluster'
+
 query = 'american independent war'
 
 docno_id_map = dict()
@@ -26,7 +29,7 @@ def generate_base_set(uniq_url_set):
 
     body = {
         "size": 1000,
-        "fields": ['url'],
+        "fields": ['docno'],
         "query": {
             "match": {
                 "text": query
@@ -34,12 +37,13 @@ def generate_base_set(uniq_url_set):
         }
     }
 
-    resp = es.search(index=data_set, doc_type='document',body=body, explain=False)
+    resp = cluster.search(index=data_set, doc_type='document',body=body, explain=False)
 
     root_ids = set()
 
     for entry in resp['hits']['hits']:
-        url = entry['fields']['url'][0]
+        url = entry['fields']['docno'][0]
+        log.info('{}'.format(url))
         root_ids.add(entry['_id'])
         id_counter = put_to_maps(id_counter, url)
 
@@ -61,7 +65,7 @@ def generate_base_set(uniq_url_set):
             },
             "fields": ["out_links"]
         }
-        resp = es.search(index=data_set, doc_type='document',body=body, explain=False)
+        resp = cluster.search(index=data_set, doc_type='document',body=body, explain=False)
         try:
             for entry in resp['hits']['hits'][0]['fields']['out_links']:
                 if entry in uniq_url_set and entry not in docno_id_map: id_counter = put_to_maps(id_counter, entry)
@@ -76,18 +80,18 @@ in_link_map = defaultdict(list)
 def generate_out_in_links():
 
     body = {
-        "fields": ['out_links', 'url'],
+        "fields": ['out_links', 'docno'],
         "query": {
             "match_all": {}
         }
     }
 
-    resp = es.search(index=data_set, doc_type='document',body=body, explain=False, scroll="100m", size=2000)
+    resp = cluster.search(index=data_set, doc_type='document',body=body, explain=False, scroll="1000m", size=500)
     scroll_id = resp['_scroll_id']
     while True:
         for i in resp['hits']['hits']:
 
-            url = i['fields']['url'][0]
+            url = i['fields']['docno'][0]
 
             if url not in docno_id_map: continue
 
@@ -103,7 +107,7 @@ def generate_out_in_links():
                     out_link_map[url_id].append(docno_id_map[link])
                     in_link_map[docno_id_map[link]].append(url_id)
 
-        resp = es.scroll(scroll_id = scroll_id, scroll='100m')
+        resp = cluster.scroll(scroll_id = scroll_id, scroll='1000m')
         if len(resp['hits']['hits']) > 0:
             log.info('finish scroll once')
             scroll_id = resp['_scroll_id']
@@ -123,7 +127,7 @@ def put_to_maps(id_counter, url):
 
 
 def prepare():
-    uniq_url_set = util_methods.uniq_url(data_set, es)
+    uniq_url_set = util_methods.uniq_url(data_set, cluster)
     generate_base_set(uniq_url_set)
     generate_out_in_links()
 
