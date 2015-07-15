@@ -5,6 +5,8 @@ from urlparse import urlparse, urlunparse
 from urllib import unquote
 from string import *
 import re
+import string
+
 
 from Utils.ulog import log
 
@@ -35,6 +37,7 @@ class Canonicalizer(object):
         """
         given a string URL, return its normalised form
         """
+        urlstring = string.strip(urlstring)
         return urlunparse(self.norm(urlparse(urlstring)))
 
     def norm(self, urltuple):
