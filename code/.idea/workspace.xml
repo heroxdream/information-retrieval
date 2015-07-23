@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b95666ed-c123-4419-ac7a-b4be0a6d2dcc" name="Default" comment="pagerank added perplexity check and kullback-leibler check, results update">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/hanxuan.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/hanxuan.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/code/test.py" afterPath="$PROJECT_DIR$/out/production/code/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test.py" afterPath="$PROJECT_DIR$/src/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/ucluster.py" afterPath="$PROJECT_DIR$/src/Utils/ucluster.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="InformationRetrieval.iws" />
@@ -791,12 +788,6 @@
       <option name="number" value="Default" />
       <updated>1431540169190</updated>
     </task>
-    <task id="LOCAL-00006" summary="Add MetaSearch combmnz model">
-      <created>1433170396109</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1433170396109</updated>
-    </task>
     <task id="LOCAL-00007" summary="Some Change">
       <created>1433170436137</created>
       <option name="number" value="00007" />
@@ -1085,7 +1076,13 @@
       <option name="project" value="LOCAL" />
       <updated>1436973226096</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="pagerank added perplexity check and kullback-leibler check, results update">
+      <created>1437660672830</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1437660672831</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -1103,6 +1100,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32770744" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33426574" sideWeight="0.54363376" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1123,7 +1121,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39662448" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32770744" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819074" sideWeight="0.45636624" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1191,9 +1188,9 @@
     <MESSAGE value="SALSA algorithm finished..." />
     <MESSAGE value="minor change" />
     <MESSAGE value="SALSA algorithm efficiency problem solved" />
-    <MESSAGE value="pagerank added perplexity check and kullback-leibler check, results update" />
     <MESSAGE value="canonicalizer bug fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="canonicalizer bug fixed" />
+    <MESSAGE value="pagerank added perplexity check and kullback-leibler check, results update" />
+    <option name="LAST_COMMIT_MESSAGE" value="pagerank added perplexity check and kullback-leibler check, results update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
