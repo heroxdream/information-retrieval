@@ -477,18 +477,18 @@
 # print string.strip('http://en.wiktionary.org/', '/')
 
 
-from Utils.ues import es
-
-index = 'aiw_test'
-
-in_links = set()
-in_links.add('1')
-in_links.add('2')
-in_links.add('3')
-in_links.add('4')
+# from Utils.ues import es
+#
+# index = 'aiw_test'
+#
+# in_links = set()
+# in_links.add('1')
+# in_links.add('2')
+# in_links.add('3')
+# in_links.add('4')
 
 # doc = dict(in_links=list(in_links))
-res = es.update(index=index, doc_type='document', id=1, body={'doc':{'title':'21341'}}, timeout=60)
+# res = es.update(index=index, doc_type='document', id=1, body={'doc':{'title':'21341'}}, timeout=60)
 
 
 # print res['created']

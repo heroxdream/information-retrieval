@@ -24,11 +24,13 @@
       <w>pheader</w>
       <w>poslist</w>
       <w>prospero</w>
+      <w>qrel</w>
       <w>simhash</w>
       <w>snews</w>
       <w>snntp</w>
       <w>stemmer</w>
       <w>tpls</w>
+      <w>trec</w>
       <w>urlstring</w>
       <w>urltuple</w>
       <w>userinfo</w>
