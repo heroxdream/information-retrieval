@@ -30,7 +30,7 @@ while True:
 	line = line.split()[0]
 	qid, id1, id2 = line.split('-')
 	docid = id1 + '-' + id2
-	print docid
+	# print docid
 	training_map[qid][docid] = training_list[counter]
 	counter += 1
 
@@ -42,7 +42,7 @@ while True:
 	line = line.split()[0]
 	qid, id1, id2 = line.split('-')
 	docid = id1 + '-' + id2
-	print docid
+	# print docid
 	testing_map[qid][docid] = testing_list[counter]
 	counter += 1
 

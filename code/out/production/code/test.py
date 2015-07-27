@@ -493,4 +493,12 @@
 
 # print res['created']
 
-from scipy.sparse import csr_matrix
+# from scipy.sparse import csr_matrix
+# data = [17, 13, 15, 12, 3, 9, 1]
+# print len(data)
+# indices = [3, 1, 0, 4, 2, 3, 1]
+# indptr = [0, 2, 4, 6, 7]
+#
+# matrix = csr_matrix((data, indices, indptr), dtype=int).toarray()
+# print matrix
+# print type(matrix)

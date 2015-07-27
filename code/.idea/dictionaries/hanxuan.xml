@@ -13,12 +13,20 @@
       <w>dlen</w>
       <w>hanxuan</w>
       <w>heapfy</w>
+      <w>idxptr</w>
       <w>incr</w>
       <w>independe</w>
       <w>instagram</w>
+      <w>lbfgs</w>
+      <w>liblinear</w>
       <w>lmdirichlet</w>
+      <w>logreg</w>
+      <w>lsvc</w>
+      <w>lsvr</w>
       <w>mbytes</w>
       <w>newfile</w>
+      <w>nusvc</w>
+      <w>nusvr</w>
       <w>oldfile</w>
       <w>pagerank</w>
       <w>pheader</w>
